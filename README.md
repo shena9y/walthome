@@ -10,6 +10,5 @@
 
 ![Mobile Site Pic](mobileSiteScreenShoot.png)
 
-[My Github](https://github.com/shena9y)
 
 [Live Preview](https://shena9y.github.io/walthome/)
