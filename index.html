@@ -3,26 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shena9y â€” Creative Developer &amp; Designer | Work Gallery</title>
-    <meta name="title" content="shena9y â€” Creative Developer &amp; Designer | Work Gallery" />
+    <title>Dream Place — Book Extraordinary Stays Around the World</title>
+    <meta name="title" content="Dream Place — Book Extraordinary Stays Around the World" />
     <meta
       name="description"
-      content="Selected works by Mohammed Hamdy (shena9y) â€” a high-end gallery of web experiences, brand identities and digital products crafted with precision." />
+      content="Dream Place is a curated booking platform for exceptional homes — villas, penthouses, lofts and retreats, handpicked and verified for unforgettable stays." />
     <meta name="author" content="Mohammed Hamdy (shena9y)" />
     <meta name="theme-color" content="#0a0a0f" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="shena9y â€” Work Gallery" />
-    <meta property="og:title" content="shena9y â€” Creative Developer &amp; Designer" />
+    <meta property="og:site_name" content="Dream Place" />
+    <meta property="og:title" content="Dream Place — Book Extraordinary Stays" />
     <meta
       property="og:description"
-      content="A curated gallery of selected works â€” web experiences, brand identities and digital products crafted with precision." />
+      content="A curated collection of exceptional homes, handpicked and verified. Book your next unforgettable stay with Dream Place." />
     <meta property="og:url" content="https://shena9y.github.io/walthome/" />
     <meta property="og:image" content="https://shena9y.github.io/walthome/assets/images/hero.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="shena9y â€” Creative Developer &amp; Designer" />
+    <meta name="twitter:title" content="Dream Place — Book Extraordinary Stays" />
     <meta
       name="twitter:description"
-      content="A curated gallery of selected works â€” web experiences, brand identities and digital products crafted with precision." />
+      content="A curated collection of exceptional homes, handpicked and verified. Book your next unforgettable stay with Dream Place." />
     <meta name="twitter:image" content="https://shena9y.github.io/walthome/assets/images/hero.png" />
     <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,7 +34,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/booking.js" defer></script>
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
@@ -44,23 +45,26 @@
     -->
     <header class="header" data-header>
       <div class="container header-inner">
-        <a href="#home" class="logo" aria-label="shena9y â€” home">
-          <img src="./assets/images/logo.svg" width="132" height="28" alt="shena9y" />
+        <a href="index.html" class="logo" aria-label="Dream Place — home">
+          <img src="./assets/images/logo.svg" width="158" height="28" alt="Dream Place" />
         </a>
 
         <nav class="navbar" id="primary-navbar" aria-label="Main navigation" data-navbar>
           <ul class="navbar-list">
-            <li><a href="#home" class="navbar-link active" aria-current="page">Home</a></li>
-            <li><a href="#work" class="navbar-link">Work</a></li>
-            <li><a href="#services" class="navbar-link">Services</a></li>
-            <li><a href="#about" class="navbar-link">About</a></li>
-            <li><a href="#testimonials" class="navbar-link">Clients</a></li>
+            <li><a href="index.html" class="navbar-link active" aria-current="page">Home</a></li>
+            <li><a href="stays.html" class="navbar-link">Stays</a></li>
+            <li><a href="about.html" class="navbar-link">About</a></li>
+            <li><a href="contact.html" class="navbar-link">Contact</a></li>
           </ul>
         </nav>
 
         <div class="header-actions">
-          <a href="#contact" class="btn btn-primary btn-sm">
-            <span class="btn-text">Let&rsquo;s Talk</span>
+          <a href="favorites.html" class="icon-btn" aria-label="View saved stays" title="Saved stays">
+            <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+            <span class="icon-badge" data-fav-count hidden>0</span>
+          </a>
+          <a href="stays.html" class="btn btn-primary btn-sm">
+            <span class="btn-text">Book a Stay</span>
             <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
           </a>
           <button
@@ -78,9 +82,9 @@
 
     <main id="main">
       <!--
-      - #HERO
+      - #HERO + SEARCH
       -->
-      <section class="hero" id="home" aria-label="Introduction">
+      <section class="hero" aria-label="Welcome">
         <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
         <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
         <div class="container">
@@ -88,42 +92,74 @@
             <div class="hero-content">
               <p class="eyebrow reveal">
                 <span class="eyebrow-dot" aria-hidden="true"></span>
-                Available for new projects
+                1,200+ verified stays worldwide
               </p>
 
               <h1 class="display reveal" style="--reveal-delay: 80ms">
-                Crafting digital experiences that feel
-                <em class="accent-serif">alive</em>
+                Find a place that feels like
+                <em class="accent-serif">a dream</em>
               </h1>
 
               <p class="hero-text reveal" style="--reveal-delay: 160ms">
-                I&rsquo;m Mohammed Hamdy â€” a creative developer &amp; designer building
-                refined web experiences, brand identities and digital products for
-                ambitious studios and startups.
+                Dream Place is a curated booking platform for exceptional homes —
+                every stay handpicked, verified and hosted by people who care
+                about the details as much as you do.
               </p>
 
-              <div class="hero-actions reveal" style="--reveal-delay: 240ms">
-                <a href="#work" class="btn btn-primary">
-                  <span class="btn-text">Explore My Work</span>
-                  <span class="material-symbols-rounded" aria-hidden="true">arrow_downward</span>
-                </a>
-                <a href="#contact" class="btn btn-ghost">
-                  <span class="btn-text">Get in Touch</span>
-                </a>
-              </div>
+              <form class="search-bar reveal" style="--reveal-delay: 240ms" data-search-form
+                action="stays.html" method="get" aria-label="Search stays">
+                <div class="search-field">
+                  <label class="search-label" for="q-destination">
+                    <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
+                    Destination
+                  </label>
+                  <input type="text" id="q-destination" name="destination"
+                    placeholder="Where to?" autocomplete="off" />
+                </div>
+                <div class="search-field">
+                  <label class="search-label" for="q-checkin">
+                    <span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>
+                    Check-in
+                  </label>
+                  <input type="date" id="q-checkin" name="checkin" data-checkin />
+                </div>
+                <div class="search-field">
+                  <label class="search-label" for="q-checkout">
+                    <span class="material-symbols-rounded" aria-hidden="true">event</span>
+                    Check-out
+                  </label>
+                  <input type="date" id="q-checkout" name="checkout" data-checkout />
+                </div>
+                <div class="search-field">
+                  <label class="search-label" for="q-guests">
+                    <span class="material-symbols-rounded" aria-hidden="true">group</span>
+                    Guests
+                  </label>
+                  <select id="q-guests" name="guests">
+                    <option value="1">1 guest</option>
+                    <option value="2" selected>2 guests</option>
+                    <option value="4">4 guests</option>
+                    <option value="6">6 guests</option>
+                    <option value="8">8+ guests</option>
+                  </select>
+                </div>
+                <button type="submit" class="search-submit" aria-label="Search stays">
+                  <span class="material-symbols-rounded" aria-hidden="true">search</span>
+                </button>
+              </form>
 
               <dl class="hero-stats reveal" style="--reveal-delay: 320ms">
                 <div class="stat">
+                  <dt class="stat-value"><span data-counter="1200">0</span>+</dt>
+                  <dd class="stat-label">Curated stays</dd>
+                </div>
+                <div class="stat">
+                  <dt class="stat-value"><span data-counter="98">0</span>%</dt>
+                  <dd class="stat-label">5-star reviews</dd>
+                </div>
+                <div class="stat">
                   <dt class="stat-value"><span data-counter="40">0</span>+</dt>
-                  <dd class="stat-label">Projects shipped</dd>
-                </div>
-                <div class="stat">
-                  <dt class="stat-value"><span data-counter="6">0</span>+</dt>
-                  <dd class="stat-label">Years of craft</dd>
-                </div>
-                <div class="stat">
-                  <dt class="stat-value"><span data-counter="25">0</span>+</dt>
-                  <dd class="stat-label">Happy clients</dd>
+                  <dd class="stat-label">Destinations</dd>
                 </div>
               </dl>
             </div>
@@ -134,13 +170,13 @@
                   src="./assets/images/hero.png"
                   width="640"
                   height="760"
-                  alt="Signature project â€” a refined digital experience by shena9y"
+                  alt="A sunlit luxury villa available on Dream Place"
                   class="img-cover" />
               </figure>
-              <a href="#work" class="hero-card" aria-label="Jump to signature project in the work gallery">
+              <a href="details.html?id=aurora-villa" class="hero-card" aria-label="View The Aurora Villa">
                 <div>
-                  <p class="hero-card-label">Signature project</p>
-                  <p class="hero-card-title">Aurora Residence</p>
+                  <p class="hero-card-label">Stay of the week</p>
+                  <p class="hero-card-title">The Aurora Villa</p>
                 </div>
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
               </a>
@@ -148,271 +184,171 @@
           </div>
         </div>
       </section>
-
       <!--
-      - #SERVICES
+      - #COLLECTIONS
       -->
-      <section class="section services" id="services" aria-label="Services">
+      <section class="section collections" aria-label="Browse by collection">
         <div class="container">
           <div class="section-head reveal">
-            <p class="section-tag">What I do</p>
+            <p class="section-tag">Collections</p>
             <h2 class="section-title">
-              Expertise, <em class="accent-serif">end to end</em>
+              Browse by <em class="accent-serif">mood</em>
             </h2>
             <p class="section-text">
-              From first sketch to final deploy â€” every detail considered,
-              every pixel intentional.
+              Whatever the occasion, there is a Dream Place for it. Start with a
+              collection, end with a memory.
             </p>
           </div>
 
-          <ul class="service-list">
-            <li class="service-card reveal">
-              <span class="service-icon material-symbols-rounded" aria-hidden="true">code</span>
-              <h3 class="service-title">Web Development</h3>
-              <p class="service-text">
-                Performant, accessible websites and web apps built with modern,
-                hand-crafted code â€” no bloated templates.
-              </p>
-              <span class="service-index" aria-hidden="true">01</span>
+          <ul class="collection-list">
+            <li class="collection-card reveal">
+              <span class="collection-icon material-symbols-rounded" aria-hidden="true">villa</span>
+              <h3 class="collection-title">Beachfront Villas</h3>
+              <p class="collection-text">Wake up to the sound of waves in private villas steps from the sand.</p>
+              <a href="stays.html?type=villa" class="collection-link">
+                Explore 120+ villas
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+              </a>
+              <span class="collection-index" aria-hidden="true">01</span>
             </li>
-            <li class="service-card reveal" style="--reveal-delay: 80ms">
-              <span class="service-icon material-symbols-rounded" aria-hidden="true">palette</span>
-              <h3 class="service-title">Brand Identity</h3>
-              <p class="service-text">
-                Distinct visual identities â€” logotype, color, typography and voice â€”
-                that make brands unforgettable.
-              </p>
-              <span class="service-index" aria-hidden="true">02</span>
+            <li class="collection-card reveal" style="--reveal-delay: 80ms">
+              <span class="collection-icon material-symbols-rounded" aria-hidden="true">apartment</span>
+              <h3 class="collection-title">City Penthouses</h3>
+              <p class="collection-text">Skyline views, rooftop terraces and the city at your feet.</p>
+              <a href="stays.html?type=penthouse" class="collection-link">
+                Explore 90+ penthouses
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+              </a>
+              <span class="collection-index" aria-hidden="true">02</span>
             </li>
-            <li class="service-card reveal" style="--reveal-delay: 160ms">
-              <span class="service-icon material-symbols-rounded" aria-hidden="true">deployed_code</span>
-              <h3 class="service-title">Product Design</h3>
-              <p class="service-text">
-                Intuitive interfaces and design systems engineered for clarity,
-                conversion and scale.
-              </p>
-              <span class="service-index" aria-hidden="true">03</span>
+            <li class="collection-card reveal" style="--reveal-delay: 160ms">
+              <span class="collection-icon material-symbols-rounded" aria-hidden="true">cabin</span>
+              <h3 class="collection-title">Mountain Cabins</h3>
+              <p class="collection-text">Fireplaces, pine forests and silence you can actually hear.</p>
+              <a href="stays.html?type=cabin" class="collection-link">
+                Explore 80+ cabins
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+              </a>
+              <span class="collection-index" aria-hidden="true">03</span>
             </li>
-            <li class="service-card reveal" style="--reveal-delay: 240ms">
-              <span class="service-icon material-symbols-rounded" aria-hidden="true">movie</span>
-              <h3 class="service-title">Motion &amp; Interaction</h3>
-              <p class="service-text">
-                Purposeful animation and micro-interactions that give products
-                personality and polish.
-              </p>
-              <span class="service-index" aria-hidden="true">04</span>
+            <li class="collection-card reveal" style="--reveal-delay: 240ms">
+              <span class="collection-icon material-symbols-rounded" aria-hidden="true">pool</span>
+              <h3 class="collection-title">Lake Houses</h3>
+              <p class="collection-text">Slow mornings on the dock, golden evenings on the water.</p>
+              <a href="stays.html?type=lake" class="collection-link">
+                Explore 60+ lake houses
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+              </a>
+              <span class="collection-index" aria-hidden="true">04</span>
             </li>
           </ul>
         </div>
       </section>
 
       <!--
-      - #WORK GALLERY
+      - #FEATURED STAYS
       -->
-      <section class="section work" id="work" aria-label="Selected work">
+      <section class="section stays-section" id="featured" aria-label="Featured stays">
         <div class="container">
-          <div class="section-head reveal">
-            <p class="section-tag">Selected work</p>
-            <h2 class="section-title">
-              The <em class="accent-serif">gallery</em>
-            </h2>
-            <p class="section-text">
-              A curated selection of projects â€” each one a story of craft,
-              collaboration and measurable results.
-            </p>
-          </div>
-
-          <div class="work-filters reveal" role="group" aria-label="Filter projects by category">
-            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
-            <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
-            <button class="filter-btn" data-filter="brand" aria-pressed="false">Brand</button>
-            <button class="filter-btn" data-filter="product" aria-pressed="false">Product</button>
-            <button class="filter-btn" data-filter="motion" aria-pressed="false">Motion</button>
-          </div>
-
-          <ul class="work-grid">
-            <li class="work-card reveal" data-category="web">
-              <a href="#" class="work-link" aria-label="View Aurora Residence case study">
-                <figure class="work-media">
-                  <img src="./assets/images/property-1.jpg" width="600" height="700"
-                    loading="lazy" alt="Aurora Residence â€” immersive real-estate platform" class="img-cover" />
-                </figure>
-                <div class="work-overlay">
-                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
-                  <div class="work-meta">
-                    <p class="work-cat">Web Experience Â· 2025</p>
-                    <h3 class="work-title">Aurora Residence</h3>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="work-card reveal" data-category="brand" style="--reveal-delay: 80ms">
-              <a href="#" class="work-link" aria-label="View Noir Atelier case study">
-                <figure class="work-media">
-                  <img src="./assets/images/property-2.jpg" width="600" height="700"
-                    loading="lazy" alt="Noir Atelier â€” brand identity for a fashion house" class="img-cover" />
-                </figure>
-                <div class="work-overlay">
-                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
-                  <div class="work-meta">
-                    <p class="work-cat">Brand Identity Â· 2025</p>
-                    <h3 class="work-title">Noir Atelier</h3>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="work-card reveal" data-category="product" style="--reveal-delay: 160ms">
-              <a href="#" class="work-link" aria-label="View Lumen Analytics case study">
-                <figure class="work-media">
-                  <img src="./assets/images/property-3.jpg" width="600" height="700"
-                    loading="lazy" alt="Lumen Analytics â€” SaaS product design" class="img-cover" />
-                </figure>
-                <div class="work-overlay">
-                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
-                  <div class="work-meta">
-                    <p class="work-cat">Product Design Â· 2024</p>
-                    <h3 class="work-title">Lumen Analytics</h3>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="work-card reveal" data-category="motion" style="--reveal-delay: 240ms">
-              <a href="#" class="work-link" aria-label="View Velvet Motion case study">
-                <figure class="work-media">
-                  <img src="./assets/images/property-4.jpg" width="600" height="700"
-                    loading="lazy" alt="Velvet Motion â€” interactive motion campaign" class="img-cover" />
-                </figure>
-                <div class="work-overlay">
-                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
-                  <div class="work-meta">
-                    <p class="work-cat">Motion &amp; Interaction Â· 2024</p>
-                    <h3 class="work-title">Velvet Motion</h3>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="work-card reveal" data-category="web">
-              <a href="#" class="work-link" aria-label="View Halcyon Hotels case study">
-                <figure class="work-media">
-                  <img src="./assets/images/property-5.jpg" width="600" height="700"
-                    loading="lazy" alt="Halcyon Hotels â€” booking experience redesign" class="img-cover" />
-                </figure>
-                <div class="work-overlay">
-                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
-                  <div class="work-meta">
-                    <p class="work-cat">Web Experience Â· 2024</p>
-                    <h3 class="work-title">Halcyon Hotels</h3>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="work-card reveal" data-category="brand" style="--reveal-delay: 80ms">
-              <a href="#" class="work-link" aria-label="View Copperline Roasters case study">
-                <figure class="work-media">
-                  <img src="./assets/images/property-6.jpg" width="600" height="700"
-                    loading="lazy" alt="Copperline Roasters â€” packaging and identity" class="img-cover" />
-                </figure>
-                <div class="work-overlay">
-                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
-                  <div class="work-meta">
-                    <p class="work-cat">Brand Identity Â· 2023</p>
-                    <h3 class="work-title">Copperline Roasters</h3>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="work-card reveal" data-category="product" style="--reveal-delay: 160ms">
-              <a href="#" class="work-link" aria-label="View Drift Finance case study">
-                <figure class="work-media">
-                  <img src="./assets/images/property-7.jpg" width="600" height="700"
-                    loading="lazy" alt="Drift Finance â€” fintech app design system" class="img-cover" />
-                </figure>
-                <div class="work-overlay">
-                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
-                  <div class="work-meta">
-                    <p class="work-cat">Product Design Â· 2023</p>
-                    <h3 class="work-title">Drift Finance</h3>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="work-card reveal" data-category="motion" style="--reveal-delay: 240ms">
-              <a href="#" class="work-link" aria-label="View Pulse Studio case study">
-                <figure class="work-media">
-                  <img src="./assets/images/property-8.jpg" width="600" height="700"
-                    loading="lazy" alt="Pulse Studio â€” animated launch site" class="img-cover" />
-                </figure>
-                <div class="work-overlay">
-                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
-                  <div class="work-meta">
-                    <p class="work-cat">Motion &amp; Interaction Â· 2023</p>
-                    <h3 class="work-title">Pulse Studio</h3>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!--
-      - #ABOUT
-      -->
-      <section class="section about" id="about" aria-label="About me">
-        <div class="marquee" aria-hidden="true">
-          <div class="marquee-track">
-            <span class="marquee-item">Design</span>
-            <span class="marquee-item">Develop</span>
-            <span class="marquee-item">Deliver</span>
-            <span class="marquee-item">Design</span>
-            <span class="marquee-item">Develop</span>
-            <span class="marquee-item">Deliver</span>
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="about-grid">
-            <div class="about-media reveal">
-              <figure class="about-frame about-frame-main">
-                <img src="./assets/images/feature-banner-1.jpg" width="560" height="640"
-                  loading="lazy" alt="Studio workspace â€” where the work comes to life" class="img-cover" />
-              </figure>
-              <figure class="about-frame about-frame-float">
-                <img src="./assets/images/feature-banner-2.jpg" width="340" height="380"
-                  loading="lazy" alt="Close-up of a crafted interface detail" class="img-cover" />
-              </figure>
+          <div class="section-head-row reveal">
+            <div class="section-head">
+              <p class="section-tag">Featured stays</p>
+              <h2 class="section-title">
+                This week&rsquo;s <em class="accent-serif">most loved</em>
+              </h2>
+              <p class="section-text">
+                Handpicked by our curators and loved by our guests — bookable
+                right now.
+              </p>
             </div>
+            <a href="stays.html" class="btn btn-ghost">
+              <span class="btn-text">View All Stays</span>
+              <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+            </a>
+          </div>
 
-            <div class="about-content">
-              <p class="section-tag reveal">About</p>
+          <ul class="stay-grid" data-featured-grid>
+            <!-- populated by booking.js -->
+          </ul>
+        </div>
+      </section>
+      <!--
+      - #WHY DREAM PLACE
+      -->
+      <section class="section why" aria-label="Why book with Dream Place">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-tag">The Dream Place standard</p>
+            <h2 class="section-title">
+              Booking, <em class="accent-serif">elevated</em>
+            </h2>
+          </div>
+
+          <ul class="why-list">
+            <li class="why-card reveal">
+              <span class="service-icon material-symbols-rounded" aria-hidden="true">verified</span>
+              <h3 class="service-title">Verified Stays</h3>
+              <p class="service-text">
+                Every home is visited, photographed and vetted by our team before
+                it ever reaches the platform.
+              </p>
+            </li>
+            <li class="why-card reveal" style="--reveal-delay: 80ms">
+              <span class="service-icon material-symbols-rounded" aria-hidden="true">support_agent</span>
+              <h3 class="service-title">24/7 Concierge</h3>
+              <p class="service-text">
+                Real humans, around the clock — from late check-ins to restaurant
+                reservations and everything between.
+              </p>
+            </li>
+            <li class="why-card reveal" style="--reveal-delay: 160ms">
+              <span class="service-icon material-symbols-rounded" aria-hidden="true">payments</span>
+              <h3 class="service-title">Best Price Promise</h3>
+              <p class="service-text">
+                Find the same stay cheaper elsewhere within 24 hours of booking
+                and we refund the difference.
+              </p>
+            </li>
+            <li class="why-card reveal" style="--reveal-delay: 240ms">
+              <span class="service-icon material-symbols-rounded" aria-hidden="true">event_busy</span>
+              <h3 class="service-title">Flexible Cancellation</h3>
+              <p class="service-text">
+                Plans change. Most stays offer free cancellation up to 48 hours
+                before check-in.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--
+      - #EXPERIENCE
+      -->
+      <section class="section experience" aria-label="The Dream Place experience">
+        <div class="container">
+          <div class="experience-grid">
+            <a href="#" class="video-card reveal" aria-label="Play the Dream Place experience film">
+              <img src="./assets/images/video-card.jpg" width="640" height="420"
+                loading="lazy" alt="Film preview — inside a Dream Place villa at sunset" class="img-cover" />
+              <span class="video-play" aria-hidden="true">
+                <span class="material-symbols-rounded">play_arrow</span>
+              </span>
+              <span class="video-caption">The experience — 2 min film</span>
+            </a>
+
+            <div class="experience-content">
+              <p class="section-tag reveal">Beyond the stay</p>
               <h2 class="section-title reveal" style="--reveal-delay: 80ms">
-                Obsessed with the details
-                <em class="accent-serif">others overlook</em>
+                Arrive as a guest,
+                <em class="accent-serif">leave as a local</em>
               </h2>
               <p class="section-text reveal" style="--reveal-delay: 160ms">
-                For over six years I&rsquo;ve partnered with founders, studios and brands
-                to turn ambiguous ideas into precise, performant digital products. My
-                approach blends engineering rigor with an editorial design sensibility â€”
-                so the work not only functions flawlessly, it feels considered.
+                Every booking includes a curated local guide, a welcome experience
+                from your host, and access to members-only moments — private chefs,
+                vineyard tours, sunrise sails.
               </p>
-
-              <ul class="about-highlights reveal" style="--reveal-delay: 240ms">
-                <li class="about-highlight">
-                  <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
-                  <span>Design-driven development, from concept to production</span>
-                </li>
-                <li class="about-highlight">
-                  <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
-                  <span>Performance &amp; accessibility baked in, never bolted on</span>
-                </li>
-                <li class="about-highlight">
-                  <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
-                  <span>Clear communication and on-time delivery, every time</span>
-                </li>
-              </ul>
-
-              <a href="#contact" class="btn btn-outline reveal" style="--reveal-delay: 320ms">
-                <span class="btn-text">Start a Project</span>
+              <a href="about.html" class="btn btn-outline reveal" style="--reveal-delay: 240ms">
+                <span class="btn-text">Our Story</span>
                 <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
               </a>
             </div>
@@ -422,12 +358,12 @@
       <!--
       - #TESTIMONIALS
       -->
-      <section class="section testimonials" id="testimonials" aria-label="Client testimonials">
+      <section class="section testimonials" aria-label="Guest stories">
         <div class="container">
           <div class="section-head reveal">
-            <p class="section-tag">Kind words</p>
+            <p class="section-tag">Guest stories</p>
             <h2 class="section-title">
-              Clients <em class="accent-serif">say it best</em>
+              Loved by <em class="accent-serif">travelers</em>
             </h2>
           </div>
 
@@ -441,16 +377,16 @@
                 <span class="material-symbols-rounded" aria-hidden="true">star</span>
               </div>
               <blockquote class="quote-text">
-                &ldquo;Working with Mohammed was the best decision we made for our rebrand.
-                He translated a vague vision into an identity our customers instantly
-                connected with.&rdquo;
+                &ldquo;The Aurora Villa was even better than the photos — and the
+                concierge arranged a private chef for our anniversary within
+                hours. Flawless.&rdquo;
               </blockquote>
               <div class="quote-author">
                 <img src="./assets/images/avatar-1.jpg" width="48" height="48" loading="lazy"
                   alt="" class="quote-avatar" />
                 <div>
                   <p class="quote-name">Chris Traeger</p>
-                  <p class="quote-role">Founder, Noir Atelier</p>
+                  <p class="quote-role">Stayed in Santorini</p>
                 </div>
               </div>
             </li>
@@ -463,16 +399,15 @@
                 <span class="material-symbols-rounded" aria-hidden="true">star</span>
               </div>
               <blockquote class="quote-text">
-                &ldquo;Rare is the developer who sweats the typography <em>and</em> the
-                Lighthouse score. Our platform is faster, prettier and converting
-                better than ever.&rdquo;
+                &ldquo;I book a dozen work trips a year. Dream Place is the only
+                platform where the place always matches the promise.&rdquo;
               </blockquote>
               <div class="quote-author">
                 <img src="./assets/images/avatar-2.jpg" width="48" height="48" loading="lazy"
                   alt="" class="quote-avatar" />
                 <div>
                   <p class="quote-name">Duke Silver</p>
-                  <p class="quote-role">CPO, Lumen Analytics</p>
+                  <p class="quote-role">Stayed in Dubai</p>
                 </div>
               </div>
             </li>
@@ -485,41 +420,50 @@
                 <span class="material-symbols-rounded" aria-hidden="true">star</span>
               </div>
               <blockquote class="quote-text">
-                &ldquo;Every interaction feels intentional. The motion design alone doubled
-                the time visitors spend on our launch site.&rdquo;
+                &ldquo;Flexible cancellation saved our honeymoon when our flights
+                changed. Rebooked in minutes, zero stress.&rdquo;
               </blockquote>
               <div class="quote-author">
                 <img src="./assets/images/avatar-3.jpg" width="48" height="48" loading="lazy"
                   alt="" class="quote-avatar" />
                 <div>
                   <p class="quote-name">Tsukasa Aoi</p>
-                  <p class="quote-role">Creative Director, Pulse Studio</p>
+                  <p class="quote-role">Stayed in Kyoto</p>
                 </div>
               </div>
             </li>
           </ul>
         </div>
       </section>
+
       <!--
-      - #CTA
+      - #NEWSLETTER CTA
       -->
-      <section class="section cta" id="contact" aria-label="Contact">
+      <section class="section cta" aria-label="Newsletter">
         <div class="container">
           <div class="cta-box reveal">
-            <p class="section-tag">Got a project in mind?</p>
+            <p class="section-tag">Members get more</p>
             <h2 class="cta-title">
-              Let&rsquo;s build something
-              <em class="accent-serif">extraordinary</em>
+              Unlock <em class="accent-serif">member-only</em> rates
             </h2>
-            <a href="mailto:hello@shena9y.dev" class="cta-mail">
-              hello@shena9y.dev
-              <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
-            </a>
+            <p class="section-text" style="margin-inline: auto; margin-block-end: 32px">
+              Join the list for early access to new stays, secret seasonal rates
+              and members-only experiences.
+            </p>
+            <form class="newsletter-form" data-newsletter novalidate>
+              <label class="sr-only" for="newsletter-email">Email address</label>
+              <input type="email" id="newsletter-email" name="email"
+                placeholder="you@example.com" autocomplete="email" required />
+              <button type="submit" class="btn btn-primary">
+                <span class="btn-text">Join Free</span>
+                <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+              </button>
+            </form>
+            <p class="form-note" data-newsletter-note role="status" aria-live="polite"></p>
           </div>
         </div>
       </section>
     </main>
-
     <!--
     - #FOOTER
     -->
@@ -527,73 +471,66 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
-            <a href="#home" class="logo" aria-label="shena9y â€” back to top">
-              <img src="./assets/images/logo.svg" width="132" height="28" alt="shena9y" />
+            <a href="index.html" class="logo" aria-label="Dream Place — back to top">
+              <img src="./assets/images/logo.svg" width="158" height="28" alt="Dream Place" />
             </a>
             <p class="footer-text">
-              Creative developer &amp; designer crafting refined digital experiences
-              from Cairo to the world.
+              A curated booking platform for exceptional homes — verified stays,
+              honest prices and a concierge that never sleeps.
             </p>
             <ul class="social-list">
               <li>
-                <a href="https://github.com/shena9y" target="_blank" rel="noopener noreferrer"
-                  class="social-link" aria-label="GitHub profile">
-                  <span class="material-symbols-rounded" aria-hidden="true">code</span>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <img src="./assets/images/insta.svg" width="18" height="18" alt="" />
                 </a>
               </li>
               <li>
-                <a href="#" class="social-link" aria-label="Dribbble profile">
-                  <span class="material-symbols-rounded" aria-hidden="true">sports_basketball</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="social-link" aria-label="LinkedIn profile">
-                  <span class="material-symbols-rounded" aria-hidden="true">work</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="social-link" aria-label="X (Twitter) profile">
+                <a href="#" class="social-link" aria-label="X (Twitter)">
                   <img src="./assets/images/twitter.svg" width="18" height="18" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-link" aria-label="Facebook">
+                  <img src="./assets/images/facebook.svg" width="18" height="18" alt="" />
                 </a>
               </li>
             </ul>
           </div>
 
-          <nav class="footer-nav" aria-label="Footer navigation">
+          <nav class="footer-nav" aria-label="Explore">
             <p class="footer-nav-title">Explore</p>
             <ul class="footer-nav-list">
-              <li><a href="#work" class="footer-link">Work</a></li>
-              <li><a href="#services" class="footer-link">Services</a></li>
-              <li><a href="#about" class="footer-link">About</a></li>
-              <li><a href="#testimonials" class="footer-link">Clients</a></li>
+              <li><a href="stays.html" class="footer-link">All Stays</a></li>
+              <li><a href="stays.html?type=villa" class="footer-link">Beachfront Villas</a></li>
+              <li><a href="stays.html?type=penthouse" class="footer-link">City Penthouses</a></li>
+              <li><a href="stays.html?type=cabin" class="footer-link">Mountain Cabins</a></li>
+              <li><a href="favorites.html" class="footer-link">Saved Stays</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-nav" aria-label="Company">
+            <p class="footer-nav-title">Company</p>
+            <ul class="footer-nav-list">
+              <li><a href="about.html" class="footer-link">About Us</a></li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+              <li><a href="about.html#hosts" class="footer-link">Become a Host</a></li>
+              <li><a href="contact.html" class="footer-link">Support</a></li>
             </ul>
           </nav>
 
           <div class="footer-nav">
-            <p class="footer-nav-title">Services</p>
-            <ul class="footer-nav-list">
-              <li><a href="#services" class="footer-link">Web Development</a></li>
-              <li><a href="#services" class="footer-link">Brand Identity</a></li>
-              <li><a href="#services" class="footer-link">Product Design</a></li>
-              <li><a href="#services" class="footer-link">Motion &amp; Interaction</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-nav">
             <p class="footer-nav-title">Contact</p>
             <ul class="footer-nav-list">
-              <li><a href="mailto:hello@shena9y.dev" class="footer-link">hello@shena9y.dev</a></li>
-              <li><a href="https://github.com/shena9y" target="_blank" rel="noopener noreferrer" class="footer-link">github.com/shena9y</a></li>
-              <li><span class="footer-link footer-link-static">Cairo, Egypt</span></li>
+              <li><a href="mailto:stay@dreamplace.travel" class="footer-link">stay@dreamplace.travel</a></li>
+              <li><a href="tel:+201001234567" class="footer-link">+20 100 123 4567</a></li>
+              <li><span class="footer-link footer-link-static">Cairo · Dubai · Santorini</span></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p class="copyright">
-            &copy; 2026 Mohammed Hamdy (shena9y). All rights reserved.
-          </p>
-          <p class="footer-note">Designed &amp; built with obsessive attention to detail.</p>
+          <p class="copyright">&copy; 2026 Dream Place. All rights reserved.</p>
+          <p class="footer-note">Crafted with obsessive attention to detail.</p>
         </div>
       </div>
     </footer>

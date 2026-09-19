@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Stays — Dream Place</title>
+    <meta name="description" content="Browse every verified Dream Place stay — filter by destination, price, type and guests to find your perfect escape." />
+    <meta name="theme-color" content="#0a0a0f" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/pages.css" />
+    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/booking.js" defer></script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="header" data-header>
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="Dream Place — home">
+          <img src="./assets/images/logo.svg" width="158" height="28" alt="Dream Place" />
+        </a>
+
+        <nav class="navbar" id="primary-navbar" aria-label="Main navigation" data-navbar>
+          <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link">Home</a></li>
+            <li><a href="stays.html" class="navbar-link active" aria-current="page">Stays</a></li>
+            <li><a href="about.html" class="navbar-link">About</a></li>
+            <li><a href="contact.html" class="navbar-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="favorites.html" class="icon-btn" aria-label="View saved stays" title="Saved stays">
+            <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+            <span class="icon-badge" data-fav-count hidden>0</span>
+          </a>
+          <a href="stays.html" class="btn btn-primary btn-sm">
+            <span class="btn-text">Book a Stay</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+          </a>
+          <button class="nav-toggler" aria-label="Toggle navigation menu"
+            aria-expanded="false" aria-controls="primary-navbar" data-nav-toggler>
+            <span class="nav-line"></span>
+            <span class="nav-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero" aria-label="All stays">
+        <div class="container">
+          <p class="section-tag reveal">The collection</p>
+          <h1 class="section-title reveal" style="--reveal-delay: 80ms">
+            Every stay, <em class="accent-serif">verified</em>
+          </h1>
+          <p class="section-text reveal" style="--reveal-delay: 160ms">
+            <span data-results-count>12</span> exceptional homes — each visited,
+            photographed and approved by our curators.
+          </p>
+        </div>
+      </section>
+
+      <section class="section pt-0" aria-label="Filter and browse stays">
+        <div class="container">
+          <form class="filter-bar reveal" data-filter-bar aria-label="Filter stays">
+            <div class="filter-field">
+              <label class="search-label" for="f-destination">
+                <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
+                Destination
+              </label>
+              <input type="text" id="f-destination" data-filter-destination
+                placeholder="City, country or name" autocomplete="off" />
+            </div>
+            <div class="filter-field">
+              <label class="search-label" for="f-type">
+                <span class="material-symbols-rounded" aria-hidden="true">home</span>
+                Type
+              </label>
+              <select id="f-type" data-filter-type>
+                <option value="all">All types</option>
+                <option value="villa">Villa</option>
+                <option value="penthouse">Penthouse</option>
+                <option value="cabin">Cabin</option>
+                <option value="lake">Lake house</option>
+                <option value="loft">Loft</option>
+                <option value="retreat">Retreat</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label class="search-label" for="f-price">
+                <span class="material-symbols-rounded" aria-hidden="true">payments</span>
+                Max price / night
+              </label>
+              <select id="f-price" data-filter-price>
+                <option value="0">Any price</option>
+                <option value="250">Up to $250</option>
+                <option value="500">Up to $500</option>
+                <option value="900">Up to $900</option>
+                <option value="1500">Up to $1,500</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label class="search-label" for="f-guests">
+                <span class="material-symbols-rounded" aria-hidden="true">group</span>
+                Guests
+              </label>
+              <select id="f-guests" data-filter-guests>
+                <option value="0">Any</option>
+                <option value="2">2+</option>
+                <option value="4">4+</option>
+                <option value="6">6+</option>
+                <option value="8">8+</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label class="search-label" for="f-sort">
+                <span class="material-symbols-rounded" aria-hidden="true">sort</span>
+                Sort by
+              </label>
+              <select id="f-sort" data-filter-sort>
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="price-desc">Price: high to low</option>
+                <option value="rating">Top rated</option>
+              </select>
+            </div>
+          </form>
+
+          <ul class="stay-grid" data-stays-grid>
+            <!-- populated by booking.js -->
+          </ul>
+
+          <div class="empty-state" data-empty-state hidden>
+            <span class="material-symbols-rounded" aria-hidden="true">travel_explore</span>
+            <h2 class="empty-title">No stays match your filters</h2>
+            <p class="section-text" style="margin-inline: auto">
+              Try widening your search — or let our concierge find it for you.
+            </p>
+            <button class="btn btn-outline" data-clear-filters type="button">
+              <span class="btn-text">Clear Filters</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="index.html" class="logo" aria-label="Dream Place — back to top">
+              <img src="./assets/images/logo.svg" width="158" height="28" alt="Dream Place" />
+            </a>
+            <p class="footer-text">
+              A curated booking platform for exceptional homes — verified stays,
+              honest prices and a concierge that never sleeps.
+            </p>
+          </div>
+          <nav class="footer-nav" aria-label="Explore">
+            <p class="footer-nav-title">Explore</p>
+            <ul class="footer-nav-list">
+              <li><a href="stays.html" class="footer-link">All Stays</a></li>
+              <li><a href="favorites.html" class="footer-link">Saved Stays</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-nav" aria-label="Company">
+            <p class="footer-nav-title">Company</p>
+            <ul class="footer-nav-list">
+              <li><a href="about.html" class="footer-link">About Us</a></li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="footer-nav">
+            <p class="footer-nav-title">Contact</p>
+            <ul class="footer-nav-list">
+              <li><a href="mailto:stay@dreamplace.travel" class="footer-link">stay@dreamplace.travel</a></li>
+              <li><a href="tel:+201001234567" class="footer-link">+20 100 123 4567</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2026 Dream Place. All rights reserved.</p>
+          <p class="footer-note">Crafted with obsessive attention to detail.</p>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-top" aria-label="Back to top" data-back-top>
+      <span class="material-symbols-rounded" aria-hidden="true">arrow_upward</span>
+    </button>
+  </body>
+</html>
