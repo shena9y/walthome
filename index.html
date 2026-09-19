@@ -1,1297 +1,608 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--
-    -Primary meta tags
-    -->
-    <title>WaltHome | Buy, Sell &amp; Rent Your Dream Home</title>
-    <meta name="title" content="WaltHome | Buy, Sell &amp; Rent Your Dream Home" />
+    <title>shena9y â€” Creative Developer &amp; Designer | Work Gallery</title>
+    <meta name="title" content="shena9y â€” Creative Developer &amp; Designer | Work Gallery" />
     <meta
       name="description"
-      content="WaltHome is a real-estate platform to buy, sell and rent homes. Explore apartments, villas, townhomes and lofts, compare prices and find a place that feels like home." />
+      content="Selected works by Mohammed Hamdy (shena9y) â€” a high-end gallery of web experiences, brand identities and digital products crafted with precision." />
     <meta name="author" content="Mohammed Hamdy (shena9y)" />
-    <meta name="theme-color" content="#071833" />
-    <!--
-    - open graph / social sharing
-    -->
+    <meta name="theme-color" content="#0a0a0f" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="WaltHome" />
-    <meta
-      property="og:title"
-      content="WaltHome | Buy, Sell &amp; Rent Your Dream Home" />
+    <meta property="og:site_name" content="shena9y â€” Work Gallery" />
+    <meta property="og:title" content="shena9y â€” Creative Developer &amp; Designer" />
     <meta
       property="og:description"
-      content="Explore homes for sale and rent: apartments, villas, townhomes and lofts. Compare prices and find a place that feels like home." />
+      content="A curated gallery of selected works â€” web experiences, brand identities and digital products crafted with precision." />
     <meta property="og:url" content="https://shena9y.github.io/walthome/" />
-    <meta
-      property="og:image"
-      content="https://shena9y.github.io/walthome/assets/images/property-1.jpg" />
+    <meta property="og:image" content="https://shena9y.github.io/walthome/assets/images/hero.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="WaltHome | Buy, Sell &amp; Rent Your Dream Home" />
+    <meta name="twitter:title" content="shena9y â€” Creative Developer &amp; Designer" />
     <meta
       name="twitter:description"
-      content="Explore homes for sale and rent: apartments, villas, townhomes and lofts. Compare prices and find a place that feels like home." />
-    <meta
-      name="twitter:image"
-      content="https://shena9y.github.io/walthome/assets/images/property-1.jpg" />
-    <!-- 
-    - favicon
-    -->
+      content="A curated gallery of selected works â€” web experiences, brand identities and digital products crafted with precision." />
+    <meta name="twitter:image" content="https://shena9y.github.io/walthome/assets/images/hero.png" />
     <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
-    <!-- 
-    - google font link
-    -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
       rel="stylesheet" />
-    <!-- 
-      - google icon link
-      -->
-    <!-- 
-      - custom css link
-      -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- 
-    - custom js file
-    -->
-    <script src="./assets/js/script.js" defer></script>
-
-    <!-- 
-    - preload images
-    -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/script.js" defer></script>
   </head>
   <body>
-    <!-- 
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!--
     - #HEADER
     -->
     <header class="header" data-header>
-      <div class="container">
-        <a href="#" class="logo">
-          <img
-            src="./assets/images/logo.png"
-            width="190"
-            height="28"
-            alt="wealthome" />
+      <div class="container header-inner">
+        <a href="#home" class="logo" aria-label="shena9y â€” home">
+          <img src="./assets/images/logo.svg" width="132" height="28" alt="shena9y" />
         </a>
+
         <nav class="navbar" id="primary-navbar" aria-label="Main navigation" data-navbar>
           <ul class="navbar-list">
-            <li>
-              <a href="#" class="navbar-link label-medium active" aria-current="page">Home</a>
-            </li>
-            <li>
-              <a href="#" class="navbar-link label-medium">Rent</a>
-            </li>
-            <li>
-              <a href="#" class="navbar-link label-medium">Sell</a>
-            </li>
-            <li>
-              <a href="#" class="navbar-link label-medium">Buy</a>
-            </li>
-            <li>
-              <a href="#" class="navbar-link label-medium">About</a>
-            </li>
+            <li><a href="#home" class="navbar-link active" aria-current="page">Home</a></li>
+            <li><a href="#work" class="navbar-link">Work</a></li>
+            <li><a href="#services" class="navbar-link">Services</a></li>
+            <li><a href="#about" class="navbar-link">About</a></li>
+            <li><a href="#testimonials" class="navbar-link">Clients</a></li>
           </ul>
-          <div class="navbar-wrapper">
-            <a href="#" class="btn-link label-medium">Login</a>
-            <a href="#" class="btn btn-fill label-medium">Get Started</a>
-          </div>
         </nav>
-        <button
-          type="button"
-          class="nav-toggle-btn icon-btn"
-          aria-label="toggle navbar"
-          aria-expanded="false"
-          aria-controls="primary-navbar"
-          data-nav-toggler>
-          <span class="material-symbols-rounded open" aria-hidden="true"
-            >menu</span
-          >
-          <span class="material-symbols-rounded close" aria-hidden="true"
-            >close</span
-          >
-        </button>
+
+        <div class="header-actions">
+          <a href="#contact" class="btn btn-primary btn-sm">
+            <span class="btn-text">Let&rsquo;s Talk</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+          </a>
+          <button
+            class="nav-toggler"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-navbar"
+            data-nav-toggler>
+            <span class="nav-line"></span>
+            <span class="nav-line"></span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <main>
-      <article>
-        <!-- 
-        - #HERO
-        -->
-
-        <section class="hero">
-          <div class="container">
+    <main id="main">
+      <!--
+      - #HERO
+      -->
+      <section class="hero" id="home" aria-label="Introduction">
+        <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+        <div class="container">
+          <div class="hero-grid">
             <div class="hero-content">
-              <h1 class="headline-large hero-title">
-                Find a place where you can be youreself.
+              <p class="eyebrow reveal">
+                <span class="eyebrow-dot" aria-hidden="true"></span>
+                Available for new projects
+              </p>
+
+              <h1 class="display reveal" style="--reveal-delay: 80ms">
+                Crafting digital experiences that feel
+                <em class="accent-serif">alive</em>
               </h1>
-              <p class="body-large hero-text">
-                IF you're looking for a place where you can be youreselfe don't
-                give up. keep searching until you find a place that feels like
-                home.
+
+              <p class="hero-text reveal" style="--reveal-delay: 160ms">
+                I&rsquo;m Mohammed Hamdy â€” a creative developer &amp; designer building
+                refined web experiences, brand identities and digital products for
+                ambitious studios and startups.
               </p>
-              <form action="./" method="get" class="search-bar" role="search" aria-label="Property search">
-                <label class="search-item">
-                  <span class="label-medium label">
-                    Want to
-                    <select
-                      name="want-to"
-                      class="search-item-field body-medium">
-                      <option value="buy" selected>Buy</option>
-                      <option value="sell" selected>Sell</option>
-                      <option value="rent" selected>Rent</option>
-                    </select>
 
-                    <span class="material-symbols-rounded" aria-hidden="true">
-                      real_estate_agent
-                    </span>
-                  </span>
-                </label>
-
-                <label class="search-item">
-                  <span class="label-medium label">
-                    Property type
-                    <select
-                      name="property-type"
-                      class="search-item-field body-medium">
-                      <option value="any" selected>Any</option>
-                      <option value="apartments" selected>Apartments</option>
-                      <option value="villa" selected>Villa</option>
-                      <option value="townhome" selected>Townhome</option>
-                      <option value="villa" selected>Villa</option>
-                      <option value="bungalow" selected>Bungalow</option>
-                      <option value="loft" selected>Loft</option>
-                    </select>
-
-                    <span class="material-symbols-rounded" aria-hidden="true"
-                      >gite</span
-                    >
-                  </span>
-                </label>
-                <label class="search-item">
-                  <span class="label-medium label">Location</span>
-                  <input
-                    type="text"
-                    name="location"
-                    placeholder="Street, City, Zip..."
-                    class="search-item-field body-medium" />
-
-                  <span class="material-symbols-rounded" aria-hidden="true"
-                    >location_on</span
-                  >
-                </label>
-                <button type="submit" class="search-btn">
-                  <span class="material-symbols-rounded" aria-hidden="true"
-                    >search</span
-                  >
-
-                  <span class="label-medium">Search</span>
-                </button>
-              </form>
-            </div>
-            <img
-              src="./assets/images/hero.png"
-              width="816"
-              height="659"
-              role="presentation"
-              alt=""
-              class="hero-banner" />
-            <img
-              src="./assets/images/bg-pattern.png"
-              width="1240"
-              height="840"
-              role="presentation"
-              alt=""
-              class="bg-pattern" />
-          </div>
-        </section>
-
-        <!-- 
-        - #PROPERTY SECTION
-        -->
-
-        <section class="section property" aria-labelledby="property-label">
-          <div class="container">
-            <div class="title-wrapper">
-              <div>
-                <h2 class="section-title headline-small" id="property-label">
-                  Best Home in your city
-                </h2>
-                <p class="section-text body-large">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                  illum eos, voluptas placeat autem corrupti aut exercitationem.
-                </p>
+              <div class="hero-actions reveal" style="--reveal-delay: 240ms">
+                <a href="#work" class="btn btn-primary">
+                  <span class="btn-text">Explore My Work</span>
+                  <span class="material-symbols-rounded" aria-hidden="true">arrow_downward</span>
+                </a>
+                <a href="#contact" class="btn btn-ghost">
+                  <span class="btn-text">Get in Touch</span>
+                </a>
               </div>
-              <a href="#" class="btn btn-outline">
-                <span class="label-meidum">Explore more</span>
-                <span class="material-symbols-rounded" aria-hidden="true">
-                  arrow_outward
-                </span>
+
+              <dl class="hero-stats reveal" style="--reveal-delay: 320ms">
+                <div class="stat">
+                  <dt class="stat-value"><span data-counter="40">0</span>+</dt>
+                  <dd class="stat-label">Projects shipped</dd>
+                </div>
+                <div class="stat">
+                  <dt class="stat-value"><span data-counter="6">0</span>+</dt>
+                  <dd class="stat-label">Years of craft</dd>
+                </div>
+                <div class="stat">
+                  <dt class="stat-value"><span data-counter="25">0</span>+</dt>
+                  <dd class="stat-label">Happy clients</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="hero-media reveal" style="--reveal-delay: 200ms">
+              <figure class="hero-frame">
+                <img
+                  src="./assets/images/hero.png"
+                  width="640"
+                  height="760"
+                  alt="Signature project â€” a refined digital experience by shena9y"
+                  class="img-cover" />
+              </figure>
+              <a href="#work" class="hero-card" aria-label="Jump to signature project in the work gallery">
+                <div>
+                  <p class="hero-card-label">Signature project</p>
+                  <p class="hero-card-title">Aurora Residence</p>
+                </div>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
               </a>
             </div>
-
-            <div class="property-list">
-              <div class="card">
-                <div class="card-banner">
-                  <figure
-                    class="img-holder"
-                    style="--width: 585; --height: 390">
-                    <img
-                      src="./assets/images/property-1.jpg"
-                      width="585"
-                      height="390"
-                      loading="lazy"
-                      decoding="async"
-                      alt="COVA home Realty"
-                      class="img-cover" />
-                  </figure>
-                  <span class="badge label-medium">New</span>
-                  <button
-                    class="icon-btn fav-btn"
-                    type="button"
-                    aria-label="add to favorite"
-                    aria-pressed="false"
-                    data-toggle-btn>
-                    <span class="material-symbols-rounded" aria-hidden="true">
-                      favorite
-                    </span>
-                  </button>
-                </div>
-                <div class="card-content">
-                  <span class="title-large">$710.68</span>
-                  <h3>
-                    <a href="#" class="title-small card-title">
-                      COVA Home Realty
-                    </a>
-                    <address class="body-medium card-text">
-                      1901 Thornridge Cir. Shiloh, Hawaii 81063
-                    </address>
-                    <div class="card-meta-list">
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bed
-                        </span>
-                        <span class="meta-text label-medium">3 Bed</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bathtub
-                        </span>
-                        <span class="meta-text label-medium">2 Bath</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          straighten
-                        </span>
-                        <span class="meta-text label-medium">1430 sqft </span>
-                      </div>
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-banner">
-                  <figure
-                    class="img-holder"
-                    style="--width: 585; --height: 390">
-                    <img
-                      src="./assets/images/property-2.jpg"
-                      width="585"
-                      height="390"
-                      loading="lazy"
-                      decoding="async"
-                      alt="Exit Realty"
-                      class="img-cover" />
-                  </figure>
-
-                  <button
-                    class="icon-btn fav-btn"
-                    type="button"
-                    aria-label="add to favorite"
-                    aria-pressed="false"
-                    data-toggle-btn>
-                    <span class="material-symbols-rounded" aria-hidden="true">
-                      favorite
-                    </span>
-                  </button>
-                </div>
-                <div class="card-content">
-                  <span class="title-large">$630.44</span>
-                  <h3>
-                    <a href="#" class="title-small card-title"> Exit Realty </a>
-                    <address class="body-medium card-text">
-                      2972 Westheimer Rd. Santa Ana, Illinois 85486
-                    </address>
-                    <div class="card-meta-list">
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bed
-                        </span>
-                        <span class="meta-text label-medium">5 Bed</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bathtub
-                        </span>
-                        <span class="meta-text label-medium">4 Bath</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          straighten
-                        </span>
-                        <span class="meta-text label-medium">1630 sqft </span>
-                      </div>
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-banner">
-                  <figure
-                    class="img-holder"
-                    style="--width: 585; --height: 390">
-                    <img
-                      src="./assets/images/property-3.jpg"
-                      width="585"
-                      height="390"
-                      loading="lazy"
-                      decoding="async"
-                      alt="The Real Estate Group"
-                      class="img-cover" />
-                  </figure>
-
-                  <button
-                    class="icon-btn fav-btn"
-                    type="button"
-                    aria-label="add to favorite"
-                    aria-pressed="false"
-                    data-toggle-btn>
-                    <span class="material-symbols-rounded" aria-hidden="true">
-                      favorite
-                    </span>
-                  </button>
-                </div>
-                <div class="card-content">
-                  <span class="title-large">$475.22</span>
-                  <h3>
-                    <a href="#" class="title-small card-title"
-                      >The Real Estate Group
-                    </a>
-                    <address class="body-medium card-text">
-                      2118 Thornridge Cir. Syracuse, Connecticut 35624
-                    </address>
-                    <div class="card-meta-list">
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bed
-                        </span>
-                        <span class="meta-text label-medium">8 Bed</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bathtub
-                        </span>
-                        <span class="meta-text label-medium">5 Bath</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          straighten
-                        </span>
-                        <span class="meta-text label-medium">1240 sqft </span>
-                      </div>
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-banner">
-                  <figure
-                    class="img-holder"
-                    style="--width: 585; --height: 390">
-                    <img
-                      src="./assets/images/property-4.jpg"
-                      width="585"
-                      height="390"
-                      loading="lazy"
-                      decoding="async"
-                      alt="757 Realty"
-                      class="img-cover" />
-                  </figure>
-
-                  <button
-                    class="icon-btn fav-btn"
-                    type="button"
-                    aria-label="add to favorite"
-                    aria-pressed="false"
-                    data-toggle-btn>
-                    <span class="material-symbols-rounded" aria-hidden="true">
-                      favorite
-                    </span>
-                  </button>
-                </div>
-                <div class="card-content">
-                  <span class="title-large">$475.22</span>
-                  <h3>
-                    <a href="#" class="title-small card-title">757 Realty </a>
-                    <address class="body-medium card-text">
-                      4140 Parker Rd. Allentown, New Mexico 31134
-                    </address>
-                    <div class="card-meta-list">
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bed
-                        </span>
-                        <span class="meta-text label-medium">6 Bed</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bathtub
-                        </span>
-                        <span class="meta-text label-medium">6 Bath</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          straighten
-                        </span>
-                        <span class="meta-text label-medium">1260 sqft </span>
-                      </div>
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-banner">
-                  <figure
-                    class="img-holder"
-                    style="--width: 585; --height: 390">
-                    <img
-                      src="./assets/images/property-5.jpg"
-                      width="585"
-                      height="390"
-                      loading="lazy"
-                      decoding="async"
-                      alt="Beach Pros Realty Inc."
-                      class="img-cover" />
-                  </figure>
-
-                  <button
-                    class="icon-btn fav-btn"
-                    type="button"
-                    aria-label="add to favorite"
-                    aria-pressed="false"
-                    data-toggle-btn>
-                    <span class="material-symbols-rounded" aria-hidden="true">
-                      favorite
-                    </span>
-                  </button>
-                </div>
-                <div class="card-content">
-                  <span class="title-large">$473.85</span>
-                  <h3>
-                    <a href="#" class="title-small card-title"
-                      >Beach Pros Realty Inc.
-                    </a>
-                    <address class="body-medium card-text">
-                      2715 Ash Dr. San Jose, South Dakota 83475
-                    </address>
-                    <div class="card-meta-list">
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bed
-                        </span>
-                        <span class="meta-text label-medium">10 Bed</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bathtub
-                        </span>
-                        <span class="meta-text label-medium">8 Bath</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          straighten
-                        </span>
-                        <span class="meta-text label-medium">2350 sqft</span>
-                      </div>
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-banner">
-                  <figure
-                    class="img-holder"
-                    style="--width: 585; --height: 390">
-                    <img
-                      src="./assets/images/property-6.jpg"
-                      width="585"
-                      height="390"
-                      loading="lazy"
-                      decoding="async"
-                      alt="Keller Williams Elite Town Center"
-                      class="img-cover" />
-                  </figure>
-
-                  <button
-                    class="icon-btn fav-btn"
-                    type="button"
-                    aria-label="add to favorite"
-                    aria-pressed="false"
-                    data-toggle-btn>
-                    <span class="material-symbols-rounded" aria-hidden="true">
-                      favorite
-                    </span>
-                  </button>
-                </div>
-                <div class="card-content">
-                  <span class="title-large">$105.55</span>
-                  <h3>
-                    <a href="#" class="title-small card-title"
-                      >Keller Williams Elite Town Center
-                    </a>
-                    <address class="body-medium card-text">
-                      3517 W. Gray St. Utica, Pennsylvania 57867
-                    </address>
-                    <div class="card-meta-list">
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bed
-                        </span>
-                        <span class="meta-text label-medium">8 Bed</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bathtub
-                        </span>
-                        <span class="meta-text label-medium">8 Bath</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          straighten
-                        </span>
-                        <span class="meta-text label-medium">1950 sqft</span>
-                      </div>
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-banner">
-                  <figure
-                    class="img-holder"
-                    style="--width: 585; --height: 390">
-                    <img
-                      src="./assets/images/property-7.jpg"
-                      width="585"
-                      height="390"
-                      loading="lazy"
-                      decoding="async"
-                      alt="All Pros Real Estate"
-                      class="img-cover" />
-                  </figure>
-
-                  <button
-                    class="icon-btn fav-btn"
-                    type="button"
-                    aria-label="add to favorite"
-                    aria-pressed="false"
-                    data-toggle-btn>
-                    <span class="material-symbols-rounded" aria-hidden="true">
-                      favorite
-                    </span>
-                  </button>
-                </div>
-                <div class="card-content">
-                  <span class="title-large">$105.55</span>
-                  <h3>
-                    <a href="#" class="title-small card-title"
-                      >All Pros Real Estate
-                    </a>
-                    <address class="body-medium card-text">
-                      8502 Preston Rd. Inglewood, Maine 98380
-                    </address>
-                    <div class="card-meta-list">
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bed
-                        </span>
-                        <span class="meta-text label-medium">4 Bed</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bathtub
-                        </span>
-                        <span class="meta-text label-medium">4 Bath</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          straighten
-                        </span>
-                        <span class="meta-text label-medium">1580 sqft</span>
-                      </div>
-                    </div>
-                  </h3>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-banner">
-                  <figure
-                    class="img-holder"
-                    style="--width: 585; --height: 390">
-                    <img
-                      src="./assets/images/property-8.jpg"
-                      width="585"
-                      height="390"
-                      loading="lazy"
-                      decoding="async"
-                      alt="FIT Realty"
-                      class="img-cover" />
-                  </figure>
-
-                  <button
-                    class="icon-btn fav-btn"
-                    type="button"
-                    aria-label="add to favorite"
-                    aria-pressed="false"
-                    data-toggle-btn>
-                    <span class="material-symbols-rounded" aria-hidden="true">
-                      favorite
-                    </span>
-                  </button>
-                </div>
-                <div class="card-content">
-                  <span class="title-large">$948.55</span>
-                  <h3>
-                    <a href="#" class="title-small card-title">FIT Realty </a>
-                    <address class="body-medium card-text">
-                      4517 Washington Ave. Manchester, Kentucky 39495
-                    </address>
-                    <div class="card-meta-list">
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bed
-                        </span>
-                        <span class="meta-text label-medium">3 Bed</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          bathtub
-                        </span>
-                        <span class="meta-text label-medium">2 Bath</span>
-                      </div>
-                      <div class="meta-item">
-                        <span
-                          class="material-symbols-rounded meta-icon"
-                          aria-hidden="true">
-                          straighten
-                        </span>
-                        <span class="meta-text label-medium">1120 sqft</span>
-                      </div>
-                    </div>
-                  </h3>
-                </div>
-              </div>
-            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- 
-        #FEATURE
-        -->
+      <!--
+      - #SERVICES
+      -->
+      <section class="section services" id="services" aria-label="Services">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-tag">What I do</p>
+            <h2 class="section-title">
+              Expertise, <em class="accent-serif">end to end</em>
+            </h2>
+            <p class="section-text">
+              From first sketch to final deploy â€” every detail considered,
+              every pixel intentional.
+            </p>
+          </div>
 
-        <section class="section feature" aria-labelledby="feature-label">
-          <div class="container">
-            <figure class="feature-banner">
-              <img
-                src="./assets/images/feature-banner-1.jpg"
-                width="1020"
-                height="690"
-                loading="lazy"
-                class="img-cover"
-                alt="feature-banner" />
-            </figure>
-            <div class="feature-content">
-              <h2 class="headline-medium" id="feature-label">
-                We Specialize In Quality Home Renovations
-              </h2>
-              <p class="body-large feature-text">
-                Looking to renovate your home to reflect your style and
-                personality? Look no further than our team of experts who
-                specialize in quality home renovations to transform your space
-                into a dream home you’ll love. From design to execution.
+          <ul class="service-list">
+            <li class="service-card reveal">
+              <span class="service-icon material-symbols-rounded" aria-hidden="true">code</span>
+              <h3 class="service-title">Web Development</h3>
+              <p class="service-text">
+                Performant, accessible websites and web apps built with modern,
+                hand-crafted code â€” no bloated templates.
               </p>
-              <ul class="feature-list">
-                <li class="feature-item">
-                  <span
-                    class="material-symbols-rounded feature-icon"
-                    aria-hidden="true">
-                    check_circle
-                  </span>
-                  <span class="body-medium"> Smart Home </span>
+              <span class="service-index" aria-hidden="true">01</span>
+            </li>
+            <li class="service-card reveal" style="--reveal-delay: 80ms">
+              <span class="service-icon material-symbols-rounded" aria-hidden="true">palette</span>
+              <h3 class="service-title">Brand Identity</h3>
+              <p class="service-text">
+                Distinct visual identities â€” logotype, color, typography and voice â€”
+                that make brands unforgettable.
+              </p>
+              <span class="service-index" aria-hidden="true">02</span>
+            </li>
+            <li class="service-card reveal" style="--reveal-delay: 160ms">
+              <span class="service-icon material-symbols-rounded" aria-hidden="true">deployed_code</span>
+              <h3 class="service-title">Product Design</h3>
+              <p class="service-text">
+                Intuitive interfaces and design systems engineered for clarity,
+                conversion and scale.
+              </p>
+              <span class="service-index" aria-hidden="true">03</span>
+            </li>
+            <li class="service-card reveal" style="--reveal-delay: 240ms">
+              <span class="service-icon material-symbols-rounded" aria-hidden="true">movie</span>
+              <h3 class="service-title">Motion &amp; Interaction</h3>
+              <p class="service-text">
+                Purposeful animation and micro-interactions that give products
+                personality and polish.
+              </p>
+              <span class="service-index" aria-hidden="true">04</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--
+      - #WORK GALLERY
+      -->
+      <section class="section work" id="work" aria-label="Selected work">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-tag">Selected work</p>
+            <h2 class="section-title">
+              The <em class="accent-serif">gallery</em>
+            </h2>
+            <p class="section-text">
+              A curated selection of projects â€” each one a story of craft,
+              collaboration and measurable results.
+            </p>
+          </div>
+
+          <div class="work-filters reveal" role="group" aria-label="Filter projects by category">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+            <button class="filter-btn" data-filter="brand" aria-pressed="false">Brand</button>
+            <button class="filter-btn" data-filter="product" aria-pressed="false">Product</button>
+            <button class="filter-btn" data-filter="motion" aria-pressed="false">Motion</button>
+          </div>
+
+          <ul class="work-grid">
+            <li class="work-card reveal" data-category="web">
+              <a href="#" class="work-link" aria-label="View Aurora Residence case study">
+                <figure class="work-media">
+                  <img src="./assets/images/property-1.jpg" width="600" height="700"
+                    loading="lazy" alt="Aurora Residence â€” immersive real-estate platform" class="img-cover" />
+                </figure>
+                <div class="work-overlay">
+                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <div class="work-meta">
+                    <p class="work-cat">Web Experience Â· 2025</p>
+                    <h3 class="work-title">Aurora Residence</h3>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="work-card reveal" data-category="brand" style="--reveal-delay: 80ms">
+              <a href="#" class="work-link" aria-label="View Noir Atelier case study">
+                <figure class="work-media">
+                  <img src="./assets/images/property-2.jpg" width="600" height="700"
+                    loading="lazy" alt="Noir Atelier â€” brand identity for a fashion house" class="img-cover" />
+                </figure>
+                <div class="work-overlay">
+                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <div class="work-meta">
+                    <p class="work-cat">Brand Identity Â· 2025</p>
+                    <h3 class="work-title">Noir Atelier</h3>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="work-card reveal" data-category="product" style="--reveal-delay: 160ms">
+              <a href="#" class="work-link" aria-label="View Lumen Analytics case study">
+                <figure class="work-media">
+                  <img src="./assets/images/property-3.jpg" width="600" height="700"
+                    loading="lazy" alt="Lumen Analytics â€” SaaS product design" class="img-cover" />
+                </figure>
+                <div class="work-overlay">
+                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <div class="work-meta">
+                    <p class="work-cat">Product Design Â· 2024</p>
+                    <h3 class="work-title">Lumen Analytics</h3>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="work-card reveal" data-category="motion" style="--reveal-delay: 240ms">
+              <a href="#" class="work-link" aria-label="View Velvet Motion case study">
+                <figure class="work-media">
+                  <img src="./assets/images/property-4.jpg" width="600" height="700"
+                    loading="lazy" alt="Velvet Motion â€” interactive motion campaign" class="img-cover" />
+                </figure>
+                <div class="work-overlay">
+                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <div class="work-meta">
+                    <p class="work-cat">Motion &amp; Interaction Â· 2024</p>
+                    <h3 class="work-title">Velvet Motion</h3>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="work-card reveal" data-category="web">
+              <a href="#" class="work-link" aria-label="View Halcyon Hotels case study">
+                <figure class="work-media">
+                  <img src="./assets/images/property-5.jpg" width="600" height="700"
+                    loading="lazy" alt="Halcyon Hotels â€” booking experience redesign" class="img-cover" />
+                </figure>
+                <div class="work-overlay">
+                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <div class="work-meta">
+                    <p class="work-cat">Web Experience Â· 2024</p>
+                    <h3 class="work-title">Halcyon Hotels</h3>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="work-card reveal" data-category="brand" style="--reveal-delay: 80ms">
+              <a href="#" class="work-link" aria-label="View Copperline Roasters case study">
+                <figure class="work-media">
+                  <img src="./assets/images/property-6.jpg" width="600" height="700"
+                    loading="lazy" alt="Copperline Roasters â€” packaging and identity" class="img-cover" />
+                </figure>
+                <div class="work-overlay">
+                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <div class="work-meta">
+                    <p class="work-cat">Brand Identity Â· 2023</p>
+                    <h3 class="work-title">Copperline Roasters</h3>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="work-card reveal" data-category="product" style="--reveal-delay: 160ms">
+              <a href="#" class="work-link" aria-label="View Drift Finance case study">
+                <figure class="work-media">
+                  <img src="./assets/images/property-7.jpg" width="600" height="700"
+                    loading="lazy" alt="Drift Finance â€” fintech app design system" class="img-cover" />
+                </figure>
+                <div class="work-overlay">
+                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <div class="work-meta">
+                    <p class="work-cat">Product Design Â· 2023</p>
+                    <h3 class="work-title">Drift Finance</h3>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="work-card reveal" data-category="motion" style="--reveal-delay: 240ms">
+              <a href="#" class="work-link" aria-label="View Pulse Studio case study">
+                <figure class="work-media">
+                  <img src="./assets/images/property-8.jpg" width="600" height="700"
+                    loading="lazy" alt="Pulse Studio â€” animated launch site" class="img-cover" />
+                </figure>
+                <div class="work-overlay">
+                  <span class="work-arrow material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+                  <div class="work-meta">
+                    <p class="work-cat">Motion &amp; Interaction Â· 2023</p>
+                    <h3 class="work-title">Pulse Studio</h3>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--
+      - #ABOUT
+      -->
+      <section class="section about" id="about" aria-label="About me">
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span class="marquee-item">Design</span>
+            <span class="marquee-item">Develop</span>
+            <span class="marquee-item">Deliver</span>
+            <span class="marquee-item">Design</span>
+            <span class="marquee-item">Develop</span>
+            <span class="marquee-item">Deliver</span>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-media reveal">
+              <figure class="about-frame about-frame-main">
+                <img src="./assets/images/feature-banner-1.jpg" width="560" height="640"
+                  loading="lazy" alt="Studio workspace â€” where the work comes to life" class="img-cover" />
+              </figure>
+              <figure class="about-frame about-frame-float">
+                <img src="./assets/images/feature-banner-2.jpg" width="340" height="380"
+                  loading="lazy" alt="Close-up of a crafted interface detail" class="img-cover" />
+              </figure>
+            </div>
+
+            <div class="about-content">
+              <p class="section-tag reveal">About</p>
+              <h2 class="section-title reveal" style="--reveal-delay: 80ms">
+                Obsessed with the details
+                <em class="accent-serif">others overlook</em>
+              </h2>
+              <p class="section-text reveal" style="--reveal-delay: 160ms">
+                For over six years I&rsquo;ve partnered with founders, studios and brands
+                to turn ambiguous ideas into precise, performant digital products. My
+                approach blends engineering rigor with an editorial design sensibility â€”
+                so the work not only functions flawlessly, it feels considered.
+              </p>
+
+              <ul class="about-highlights reveal" style="--reveal-delay: 240ms">
+                <li class="about-highlight">
+                  <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
+                  <span>Design-driven development, from concept to production</span>
                 </li>
-                <li class="feature-item">
-                  <span
-                    class="material-symbols-rounded feature-icon"
-                    aria-hidden="true">
-                    check_circle
-                  </span>
-                  <span class="body-medium"> Beautiful Scene Around </span>
+                <li class="about-highlight">
+                  <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
+                  <span>Performance &amp; accessibility baked in, never bolted on</span>
                 </li>
-                <li class="feature-item">
-                  <span
-                    class="material-symbols-rounded feature-icon"
-                    aria-hidden="true">
-                    check_circle
-                  </span>
-                  <span class="body-medium"> Exceptional lifestyle </span>
-                </li>
-                <li class="feature-item">
-                  <span
-                    class="material-symbols-rounded feature-icon"
-                    aria-hidden="true">
-                    check_circle
-                  </span>
-                  <span class="body-medium"> Complete 24/7 Security </span>
+                <li class="about-highlight">
+                  <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
+                  <span>Clear communication and on-time delivery, every time</span>
                 </li>
               </ul>
-            </div>
-          </div>
-        </section>
 
-        <section
-          class="section feature feature-2"
-          aria-labelledby="feature-label-2">
-          <div class="container">
-            <figure class="feature-banner">
-              <img
-                src="./assets/images/feature-banner-2.jpg"
-                width="1020"
-                height="690"
-                loading="lazy"
-                class="img-cover"
-                alt="feature-banner" />
-            </figure>
-            <div class="feature-content">
-              <h2 class="headline-medium" id="feature-label-2">
-                We Are Experts In Historic Home Renovations
-              </h2>
-              <p class="body-large feature-text">
-                ooking to renovate your home to reflect your style and
-                personality? Look no further than our team of experts who
-                specialize in quality home renovations to transform your space
-                into a dream home you’ll love. From design to execution.
-              </p>
-              <ul class="feature-list">
-                <li class="feature-item">
-                  <span
-                    class="material-symbols-rounded feature-icon"
-                    aria-hidden="true">
-                    check_circle
-                  </span>
-                  <span class="body-medium"> Smart Home </span>
-                </li>
-                <li class="feature-item">
-                  <span
-                    class="material-symbols-rounded feature-icon"
-                    aria-hidden="true">
-                    check_circle
-                  </span>
-                  <span class="body-medium"> Beautiful Scene Around </span>
-                </li>
-                <li class="feature-item">
-                  <span
-                    class="material-symbols-rounded feature-icon"
-                    aria-hidden="true">
-                    check_circle
-                  </span>
-                  <span class="body-medium"> Exceptional lifestyle </span>
-                </li>
-                <li class="feature-item">
-                  <span
-                    class="material-symbols-rounded feature-icon"
-                    aria-hidden="true">
-                    check_circle
-                  </span>
-                  <span class="body-medium"> Complete 24/7 Security </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- 
-        - #VIDEO
-        -->
-
-        <section class="section video">
-          <div class="container">
-            <div class="video-card">
-              <button class="play-btn" type="button" aria-label="play video">
-                <span class="material-symbols-rounded" aria-hidden="true">
-                  play_arrow</span
-                >
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <!-- 
-        - #STORY
-        -->
-
-        <section class="section story" aria-labelledby="story-label">
-          <div class="container">
-            <div class="title-wrapper">
-              <div>
-                <p class="section-subtitle title-medium">Our Customers</p>
-                <h2 class="section-title headline-medium" id="story-label">
-                  We Help 1000+ Family Find Their True Home
-                </h2>
-                <ul class="avatar-list">
-                  <li class="avatar">
-                    <img
-                      src="./assets/images/avatar-1.jpg"
-                      width="120"
-                      height="80"
-                      loading="lazy"
-                      alt="John smith"
-                      class="img-cover" />
-                  </li>
-                  <li class="avatar">
-                    <img
-                      src="./assets/images/avatar-2.jpg"
-                      width="120"
-                      height="80"
-                      loading="lazy"
-                      alt="Jane smith"
-                      class="img-cover" />
-                  </li>
-                  <li class="avatar">
-                    <img
-                      src="./assets/images/avatar-3.jpg"
-                      width="120"
-                      height="80"
-                      loading="lazy"
-                      alt="John smith"
-                      class="img-cover" />
-                  </li>
-                  <li class="avatar">
-                    <img
-                      src="./assets/images/avatar-4.jpg"
-                      width="120"
-                      height="80"
-                      loading="lazy"
-                      alt="Jane smith"
-                      class="img-cover" />
-                    <div class="overlay-content">
-                      <span class="label-medium">99+</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <a href="#" class="btn btn-outline">
-                <span class="label-medium">View All Stories</span>
-                <span class="material-symbols-rounded" aria-hidden="true"
-                  >arrow_outward</span
-                >
+              <a href="#contact" class="btn btn-outline reveal" style="--reveal-delay: 320ms">
+                <span class="btn-text">Start a Project</span>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
               </a>
             </div>
-            <ul class="story-list">
-              <li
-                class="story-card"
-                style="background-image: url(./assets/images/story-1.jpg)">
-                <a href="#" class="overlay-content">
-                  <div>
-                    <h3 class="title-small">Chris traeger</h3>
-                    <div class="rating-wrapper">
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-
-                      <data value="5" class="title-small rating-text">5.0</data>
-                    </div>
-                  </div>
-
-                  <figure class="card-avatar">
-                    <img
-                      src="./assets/images/story-avatar-1.jpg"
-                      width="56"
-                      height="56"
-                      loading="lazy"
-                      alt="Chris Traeger"
-                      class="img-cover" />
-                  </figure>
-                </a>
-              </li>
-              <li
-                class="story-card"
-                style="background-image: url(./assets/images/story-2.jpg)">
-                <a href="#" class="overlay-content">
-                  <div>
-                    <h3 class="title-small">Duke Silver</h3>
-                    <div class="rating-wrapper">
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-
-                      <data value="5" class="title-small rating-text">5.0</data>
-                    </div>
-                  </div>
-
-                  <figure class="card-avatar">
-                    <img
-                      src="./assets/images/story-avatar-2.jpg"
-                      width="56"
-                      height="56"
-                      loading="lazy"
-                      alt="Duke Silver"
-                      class="img-cover" />
-                  </figure>
-                </a>
-              </li>
-              <li
-                class="story-card"
-                style="background-image: url(./assets/images/story-3.jpg)">
-                <a href="#" class="overlay-content">
-                  <div>
-                    <h3 class="title-small">Tsukasa Aoi</h3>
-                    <div class="rating-wrapper">
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-
-                      <data value="5" class="title-small rating-text">5.0</data>
-                    </div>
-                  </div>
-
-                  <figure class="card-avatar">
-                    <img
-                      src="./assets/images/story-avatar-3.jpg"
-                      width="56"
-                      height="56"
-                      loading="lazy"
-                      alt="Tsukasa Aoi"
-                      class="img-cover" />
-                  </figure>
-                </a>
-              </li>
-              <li
-                class="story-card"
-                style="background-image: url(./assets/images/story-4.jpg)">
-                <a href="#" class="overlay-content">
-                  <div>
-                    <h3 class="title-small">Freida Varnes</h3>
-                    <div class="rating-wrapper">
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-
-                      <data value="5" class="title-small rating-text">5.0</data>
-                    </div>
-                  </div>
-
-                  <figure class="card-avatar">
-                    <img
-                      src="./assets/images/story-avatar-4.jpg"
-                      width="56"
-                      height="56"
-                      loading="lazy"
-                      alt="Freida Varnes"
-                      class="img-cover" />
-                  </figure>
-                </a>
-              </li>
-              <li
-                class="story-card"
-                style="background-image: url(./assets/images/story-5.jpg)">
-                <a href="#" class="overlay-content">
-                  <div>
-                    <h3 class="title-small">Carl Lorthner</h3>
-                    <div class="rating-wrapper">
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-
-                      <data value="5" class="title-small rating-text">5.0</data>
-                    </div>
-                  </div>
-
-                  <figure class="card-avatar">
-                    <img
-                      src="./assets/images/story-avatar-5.jpg"
-                      width="56"
-                      height="56"
-                      loading="lazy"
-                      alt="Carl Lorthner"
-                      class="img-cover" />
-                  </figure>
-                </a>
-              </li>
-              <li
-                class="story-card"
-                style="background-image: url(./assets/images/story-6.jpg)">
-                <a href="#" class="overlay-content">
-                  <div>
-                    <h3 class="title-small">Marci Senter</h3>
-                    <div class="rating-wrapper">
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-                      <span class="material-symbols-rounded" aria-hidden="true"
-                        >star</span
-                      >
-
-                      <data value="5" class="title-small rating-text">5.0</data>
-                    </div>
-                  </div>
-
-                  <figure class="card-avatar">
-                    <img
-                      src="./assets/images/story-avatar-6.jpg"
-                      width="56"
-                      height="56"
-                      loading="lazy"
-                      alt="Marci Senter"
-                      class="img-cover" />
-                  </figure>
-                </a>
-              </li>
-            </ul>
           </div>
-        </section>
-      </article>
+        </div>
+      </section>
+      <!--
+      - #TESTIMONIALS
+      -->
+      <section class="section testimonials" id="testimonials" aria-label="Client testimonials">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-tag">Kind words</p>
+            <h2 class="section-title">
+              Clients <em class="accent-serif">say it best</em>
+            </h2>
+          </div>
+
+          <ul class="quote-grid">
+            <li class="quote-card reveal">
+              <div class="quote-stars" role="img" aria-label="Rated 5 out of 5">
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+              </div>
+              <blockquote class="quote-text">
+                &ldquo;Working with Mohammed was the best decision we made for our rebrand.
+                He translated a vague vision into an identity our customers instantly
+                connected with.&rdquo;
+              </blockquote>
+              <div class="quote-author">
+                <img src="./assets/images/avatar-1.jpg" width="48" height="48" loading="lazy"
+                  alt="" class="quote-avatar" />
+                <div>
+                  <p class="quote-name">Chris Traeger</p>
+                  <p class="quote-role">Founder, Noir Atelier</p>
+                </div>
+              </div>
+            </li>
+            <li class="quote-card reveal" style="--reveal-delay: 80ms">
+              <div class="quote-stars" role="img" aria-label="Rated 5 out of 5">
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+              </div>
+              <blockquote class="quote-text">
+                &ldquo;Rare is the developer who sweats the typography <em>and</em> the
+                Lighthouse score. Our platform is faster, prettier and converting
+                better than ever.&rdquo;
+              </blockquote>
+              <div class="quote-author">
+                <img src="./assets/images/avatar-2.jpg" width="48" height="48" loading="lazy"
+                  alt="" class="quote-avatar" />
+                <div>
+                  <p class="quote-name">Duke Silver</p>
+                  <p class="quote-role">CPO, Lumen Analytics</p>
+                </div>
+              </div>
+            </li>
+            <li class="quote-card reveal" style="--reveal-delay: 160ms">
+              <div class="quote-stars" role="img" aria-label="Rated 5 out of 5">
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+                <span class="material-symbols-rounded" aria-hidden="true">star</span>
+              </div>
+              <blockquote class="quote-text">
+                &ldquo;Every interaction feels intentional. The motion design alone doubled
+                the time visitors spend on our launch site.&rdquo;
+              </blockquote>
+              <div class="quote-author">
+                <img src="./assets/images/avatar-3.jpg" width="48" height="48" loading="lazy"
+                  alt="" class="quote-avatar" />
+                <div>
+                  <p class="quote-name">Tsukasa Aoi</p>
+                  <p class="quote-role">Creative Director, Pulse Studio</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--
+      - #CTA
+      -->
+      <section class="section cta" id="contact" aria-label="Contact">
+        <div class="container">
+          <div class="cta-box reveal">
+            <p class="section-tag">Got a project in mind?</p>
+            <h2 class="cta-title">
+              Let&rsquo;s build something
+              <em class="accent-serif">extraordinary</em>
+            </h2>
+            <a href="mailto:hello@shena9y.dev" class="cta-mail">
+              hello@shena9y.dev
+              <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- 
+    <!--
     - #FOOTER
     -->
-
     <footer class="footer">
-      <div class="footer-top">
-        <div class="container">
+      <div class="container">
+        <div class="footer-top">
           <div class="footer-brand">
-            <a href="#" class="logo">
-              <img
-                src="./assets/images/logo.png"
-                width="190"
-                height="28"
-                alt="Wealthome" />
+            <a href="#home" class="logo" aria-label="shena9y â€” back to top">
+              <img src="./assets/images/logo.svg" width="132" height="28" alt="shena9y" />
             </a>
-            <p class="body-medium footer-text">
-              Lorem ipsum dolor sit amet consectetur. Non bibendum sit non
-              congue pharetra pulvinar leo. Sed ut amet ipsum.
+            <p class="footer-text">
+              Creative developer &amp; designer crafting refined digital experiences
+              from Cairo to the world.
             </p>
+            <ul class="social-list">
+              <li>
+                <a href="https://github.com/shena9y" target="_blank" rel="noopener noreferrer"
+                  class="social-link" aria-label="GitHub profile">
+                  <span class="material-symbols-rounded" aria-hidden="true">code</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-link" aria-label="Dribbble profile">
+                  <span class="material-symbols-rounded" aria-hidden="true">sports_basketball</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-link" aria-label="LinkedIn profile">
+                  <span class="material-symbols-rounded" aria-hidden="true">work</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-link" aria-label="X (Twitter) profile">
+                  <img src="./assets/images/twitter.svg" width="18" height="18" alt="" />
+                </a>
+              </li>
+            </ul>
           </div>
-          <nav class="footer-nav" aria-labelledby="nav-label-1">
-            <p class="title-small footer-list-title" id="nav-label-1">
-              Quick link
-            </p>
-            <ul class="footer-list">
-              <li>
-                <a href="#" class="body-medium footer-link">Home</a>
-              </li>
-              <li>
-                <a href="#" class="body-medium footer-link">Buy</a>
-              </li>
-              <li>
-                <a href="#" class="body-medium footer-link">Sell</a>
-              </li>
-              <li>
-                <a href="#" class="body-medium footer-link">Rent</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="footer-nav" aria-labelledby="nav-label-2">
-            <p class="title-small footer-list-title" id="nav-label-2">
-              Support
-            </p>
-            <ul class="footer-list">
-              <li>
-                <a href="#" class="body-medium footer-link">About us</a>
-              </li>
-              <li>
-                <a href="#" class="body-medium footer-link">Contact us</a>
-              </li>
-              <li>
-                <a href="#" class="body-medium footer-link">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#" class="body-medium footer-link"
-                  >Terms & Conditions</a
-                >
-              </li>
-            </ul>
-          </nav>
-          <nav class="footer-nav" aria-labelledby="nav-label-3">
-            <p class="title-small footer-list-title" id="nav-label-3">
-              Get in touch
-            </p>
-            <ul class="footer-list">
-              <li>
-                <a href="" class="body-medium footer-link"
-                  >hello@wealthome.com</a
-                >
-              </li>
 
-              <li>
-                <address class="address body-medium">
-                  4140 Parker Rd. Allentown, New Mexico 31134
-                </address>
-              </li>
-              <li>
-                <ul class="social-list">
-                  <li>
-                    <a href="#" class="social-link">
-<img src="./assets/images/facebook.svg" alt="facebook" loading="lazy" decoding="async" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="social-link">
-<img src="./assets/images/twitter.svg" alt="twitter" loading="lazy" decoding="async" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="social-link">
-<img src="./assets/images/insta.svg" alt="instagram" loading="lazy" decoding="async" />
-                    </a>
-                  </li>
-                </ul>
-              </li>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <p class="footer-nav-title">Explore</p>
+            <ul class="footer-nav-list">
+              <li><a href="#work" class="footer-link">Work</a></li>
+              <li><a href="#services" class="footer-link">Services</a></li>
+              <li><a href="#about" class="footer-link">About</a></li>
+              <li><a href="#testimonials" class="footer-link">Clients</a></li>
             </ul>
           </nav>
+
+          <div class="footer-nav">
+            <p class="footer-nav-title">Services</p>
+            <ul class="footer-nav-list">
+              <li><a href="#services" class="footer-link">Web Development</a></li>
+              <li><a href="#services" class="footer-link">Brand Identity</a></li>
+              <li><a href="#services" class="footer-link">Product Design</a></li>
+              <li><a href="#services" class="footer-link">Motion &amp; Interaction</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav">
+            <p class="footer-nav-title">Contact</p>
+            <ul class="footer-nav-list">
+              <li><a href="mailto:hello@shena9y.dev" class="footer-link">hello@shena9y.dev</a></li>
+              <li><a href="https://github.com/shena9y" target="_blank" rel="noopener noreferrer" class="footer-link">github.com/shena9y</a></li>
+              <li><span class="footer-link footer-link-static">Cairo, Egypt</span></li>
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <div class="footer-bottom">
-        <div class="container">
-          <p class="copyright body-medium">Copyright 2023 codewithsadee</p>
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2026 Mohammed Hamdy (shena9y). All rights reserved.
+          </p>
+          <p class="footer-note">Designed &amp; built with obsessive attention to detail.</p>
         </div>
       </div>
     </footer>
+
+    <!--
+    - #BACK TO TOP
+    -->
+    <button class="back-top" aria-label="Back to top" data-back-top>
+      <span class="material-symbols-rounded" aria-hidden="true">arrow_upward</span>
+    </button>
   </body>
 </html>

@@ -1,18 +1,18 @@
-# Essential Stuff
+﻿# shena9y â€” Work Gallery Design System
 
 ## Html import links
 
-Google font
+Google fonts
 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
   rel="stylesheet" />
 ```
 
-Material icon
+Material icons
 
 ```html
 <link
@@ -27,35 +27,18 @@ Material icon
 ### Colors
 
 ```css
---white: #ffffff;
---yellow: #f6bd26;
---primary-100: #2179ff;
---primary-90: #1e6de5;
---primary-80: #1b61cc;
---primary-70: #1755b2;
---primary-40: #0d3166;
---primary-20: #071833;
---secondary-100: #21ffff;
---secondary-20: #073333;
---neutral-100: #fafcff;
---neutral-98: #f2f5fa;
---neutral-95: #e9ecf2;
---neutral-90: #dadfe5;
---neutral-80: #c2c6cc;
---neutral-60: #919499;
---neutral-50: #797c80;
---neutral-40: #616366;
---neutral-30: #494a4d;
---neutral-20: #303133;
---neutral-10: #18191a;
---neutral-5: #0c0c0d;
---error-100: #ff2134;
-```
-
-### Gradient
-
-```
-  --gradient: linear-gradient(270deg, #0f4392 0%, #001d3d 100%);
+--bg: #0a0a0f;
+--bg-elevated: #12121a;
+--bg-surface: #17171f;
+--ink: #f4f2ec;
+--ink-soft: #b9b7b0;
+--muted: #8a8a94;
+--accent: #d4a853;
+--accent-strong: #e8c076;
+--accent-ink: #1a1408;
+--line: #ffffff14;
+--line-strong: #ffffff26;
+--star: #f6bd26;
 ```
 
 ### Typography
@@ -63,62 +46,36 @@ Material icon
 Font family
 
 ```css
---font-primary: "Montserrat", sans-serif;
+--font-sans: "Inter", system-ui, sans-serif;
+--font-serif: "Playfair Display", Georgia, serif;
 ```
 
-Font size
+Font size (fluid)
 
 ```css
 --fs-base: 62.5%;
---fs-headline-large: 3.6rem;
---fs-headline-medium: 2.8rem;
---fs-headline-small: 2.8rem;
---fs-title-large: 2.2rem;
---fs-title-medium: 2rem;
---fs-title-small: 1.8rem;
---fs-body-large: 1.6rem;
---fs-body-medium: 1.6rem;
---fs-label-large: 1.6rem;
---fs-label-medium: 1.4rem;
-```
-
-Line height
-
-```css
---lh-headline-large: 44px;
---lh-headline-medium: 36px;
---lh-headline-small: 36px;
---lh-title-large: 28px;
---lh-title-medium: 24px;
---lh-title-small: 24px;
---lh-body-large: 24px;
---lh-body-medium: 24px;
---lh-label-large: 24px;
---lh-label-medium: 20px;
-```
-
-Font weight
-
-```css
---weight-bold: 700;
---weight-semiBold: 600;
---weight-regular: 400;
+--fs-display: clamp(4rem, 6.5vw, 7.2rem);
+--fs-headline: clamp(3.2rem, 4.5vw, 4.8rem);
+--fs-title: clamp(2.2rem, 3vw, 2.8rem);
+--fs-body-large: 1.8rem;
+--fs-body: 1.6rem;
+--fs-label: 1.4rem;
+--fs-micro: 1.2rem;
 ```
 
 Letter spacing
 
 ```css
---traking-n-025: -0.25px;
---traking-p-05: 0.5px;
+--tracking-wide: 0.14em;
+--tracking-wider: 0.22em;
 ```
 
 ### Border Radius
 
 ```css
 --radius-small: 8px;
---radius-medium: 12px;
---radius-large: 16px;
---radius-extra-large: 32px;
+--radius-medium: 14px;
+--radius-large: 22px;
 --radius-full: 1000px;
 --radius-circle: 50%;
 ```
@@ -126,16 +83,33 @@ Letter spacing
 ### Box Shadow
 
 ```css
---shadow-1: 0px 2px 4px 0px #00000033;
---shadow-2: 0px 5px 10px 0px #0000000d;
---shadow-3: 0px 5px 10px 0px #00000033;
---shadow-4: 0px 10px 20px 0px #0000001a;
+--shadow-soft: 0 10px 30px #00000040;
+--shadow-lift: 0 24px 60px #00000059;
+--shadow-accent: 0 12px 40px #d4a85333;
 ```
 
-### Transition
+### Motion
 
 ```css
---transition-easing-quick: cubic-bezier(0, 0.7, 0.3, 1);
---transition-duration-quick: 200ms;
---transition-duration-smooth: 500ms;
+--ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+--duration-quick: 250ms;
+--duration-smooth: 600ms;
 ```
+
+### Layout
+
+```css
+--container: 1200px;
+--gutter: 24px;
+--header-height: 84px;
+```
+
+---
+
+## Conventions
+
+- Dark-first palette: every surface sits on `--bg`, elevated with `--bg-elevated` / `--bg-surface`.
+- `--accent` (gold) is reserved for primary actions, highlights and editorial serif italics.
+- Reveal animations use the `.reveal` / `.revealed` classes with an optional `--reveal-delay` custom property.
+- All animations respect `prefers-reduced-motion`.
+- Interactive elements keep visible `:focus-visible` outlines in the accent color.
