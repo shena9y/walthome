@@ -6,11 +6,38 @@
     <!--
     -Primary meta tags
     -->
-    <title>WaltHome</title>
-    <meta name="title" content="Wealthome" />
+    <title>WaltHome | Buy, Sell &amp; Rent Your Dream Home</title>
+    <meta name="title" content="WaltHome | Buy, Sell &amp; Rent Your Dream Home" />
     <meta
       name="description"
-      content="This is a realestate devloped by Mohammed Hamdy AKA:shena9y" />
+      content="WaltHome is a real-estate platform to buy, sell and rent homes. Explore apartments, villas, townhomes and lofts, compare prices and find a place that feels like home." />
+    <meta name="author" content="Mohammed Hamdy (shena9y)" />
+    <meta name="theme-color" content="#071833" />
+    <!--
+    - open graph / social sharing
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="WaltHome" />
+    <meta
+      property="og:title"
+      content="WaltHome | Buy, Sell &amp; Rent Your Dream Home" />
+    <meta
+      property="og:description"
+      content="Explore homes for sale and rent: apartments, villas, townhomes and lofts. Compare prices and find a place that feels like home." />
+    <meta property="og:url" content="https://shena9y.github.io/walthome/" />
+    <meta
+      property="og:image"
+      content="https://shena9y.github.io/walthome/assets/images/property-1.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="WaltHome | Buy, Sell &amp; Rent Your Dream Home" />
+    <meta
+      name="twitter:description"
+      content="Explore homes for sale and rent: apartments, villas, townhomes and lofts. Compare prices and find a place that feels like home." />
+    <meta
+      name="twitter:image"
+      content="https://shena9y.github.io/walthome/assets/images/property-1.jpg" />
     <!-- 
     - favicon
     -->
@@ -55,10 +82,10 @@
             height="28"
             alt="wealthome" />
         </a>
-        <nav class="navbar" data-navbar>
+        <nav class="navbar" id="primary-navbar" aria-label="Main navigation" data-navbar>
           <ul class="navbar-list">
             <li>
-              <a href="#" class="navbar-link label-medium active">Home</a>
+              <a href="#" class="navbar-link label-medium active" aria-current="page">Home</a>
             </li>
             <li>
               <a href="#" class="navbar-link label-medium">Rent</a>
@@ -79,8 +106,11 @@
           </div>
         </nav>
         <button
+          type="button"
           class="nav-toggle-btn icon-btn"
           aria-label="toggle navbar"
+          aria-expanded="false"
+          aria-controls="primary-navbar"
           data-nav-toggler>
           <span class="material-symbols-rounded open" aria-hidden="true"
             >menu</span
@@ -109,7 +139,7 @@
                 give up. keep searching until you find a place that feels like
                 home.
               </p>
-              <form action="./" method="get" class="search-bar">
+              <form action="./" method="get" class="search-bar" role="search" aria-label="Property search">
                 <label class="search-item">
                   <span class="label-medium label">
                     Want to
@@ -193,7 +223,7 @@
           <div class="container">
             <div class="title-wrapper">
               <div>
-                <h2 class="section-title headline-small">
+                <h2 class="section-title headline-small" id="property-label">
                   Best Home in your city
                 </h2>
                 <p class="section-text body-large">
@@ -219,13 +249,17 @@
                       src="./assets/images/property-1.jpg"
                       width="585"
                       height="390"
+                      loading="lazy"
+                      decoding="async"
                       alt="COVA home Realty"
                       class="img-cover" />
                   </figure>
                   <span class="badge label-medium">New</span>
                   <button
                     class="icon-btn fav-btn"
+                    type="button"
                     aria-label="add to favorite"
+                    aria-pressed="false"
                     data-toggle-btn>
                     <span class="material-symbols-rounded" aria-hidden="true">
                       favorite
@@ -279,13 +313,17 @@
                       src="./assets/images/property-2.jpg"
                       width="585"
                       height="390"
+                      loading="lazy"
+                      decoding="async"
                       alt="Exit Realty"
                       class="img-cover" />
                   </figure>
 
                   <button
                     class="icon-btn fav-btn"
+                    type="button"
                     aria-label="add to favorite"
+                    aria-pressed="false"
                     data-toggle-btn>
                     <span class="material-symbols-rounded" aria-hidden="true">
                       favorite
@@ -337,13 +375,17 @@
                       src="./assets/images/property-3.jpg"
                       width="585"
                       height="390"
+                      loading="lazy"
+                      decoding="async"
                       alt="The Real Estate Group"
                       class="img-cover" />
                   </figure>
 
                   <button
                     class="icon-btn fav-btn"
+                    type="button"
                     aria-label="add to favorite"
+                    aria-pressed="false"
                     data-toggle-btn>
                     <span class="material-symbols-rounded" aria-hidden="true">
                       favorite
@@ -397,13 +439,17 @@
                       src="./assets/images/property-4.jpg"
                       width="585"
                       height="390"
+                      loading="lazy"
+                      decoding="async"
                       alt="757 Realty"
                       class="img-cover" />
                   </figure>
 
                   <button
                     class="icon-btn fav-btn"
+                    type="button"
                     aria-label="add to favorite"
+                    aria-pressed="false"
                     data-toggle-btn>
                     <span class="material-symbols-rounded" aria-hidden="true">
                       favorite
@@ -455,13 +501,17 @@
                       src="./assets/images/property-5.jpg"
                       width="585"
                       height="390"
+                      loading="lazy"
+                      decoding="async"
                       alt="Beach Pros Realty Inc."
                       class="img-cover" />
                   </figure>
 
                   <button
                     class="icon-btn fav-btn"
+                    type="button"
                     aria-label="add to favorite"
+                    aria-pressed="false"
                     data-toggle-btn>
                     <span class="material-symbols-rounded" aria-hidden="true">
                       favorite
@@ -515,13 +565,17 @@
                       src="./assets/images/property-6.jpg"
                       width="585"
                       height="390"
+                      loading="lazy"
+                      decoding="async"
                       alt="Keller Williams Elite Town Center"
                       class="img-cover" />
                   </figure>
 
                   <button
                     class="icon-btn fav-btn"
+                    type="button"
                     aria-label="add to favorite"
+                    aria-pressed="false"
                     data-toggle-btn>
                     <span class="material-symbols-rounded" aria-hidden="true">
                       favorite
@@ -575,13 +629,17 @@
                       src="./assets/images/property-7.jpg"
                       width="585"
                       height="390"
+                      loading="lazy"
+                      decoding="async"
                       alt="All Pros Real Estate"
                       class="img-cover" />
                   </figure>
 
                   <button
                     class="icon-btn fav-btn"
+                    type="button"
                     aria-label="add to favorite"
+                    aria-pressed="false"
                     data-toggle-btn>
                     <span class="material-symbols-rounded" aria-hidden="true">
                       favorite
@@ -635,13 +693,17 @@
                       src="./assets/images/property-8.jpg"
                       width="585"
                       height="390"
+                      loading="lazy"
+                      decoding="async"
                       alt="FIT Realty"
                       class="img-cover" />
                   </figure>
 
                   <button
                     class="icon-btn fav-btn"
+                    type="button"
                     aria-label="add to favorite"
+                    aria-pressed="false"
                     data-toggle-btn>
                     <span class="material-symbols-rounded" aria-hidden="true">
                       favorite
@@ -819,7 +881,7 @@
         <section class="section video">
           <div class="container">
             <div class="video-card">
-              <button class="play-btn" aria-label="play video">
+              <button class="play-btn" type="button" aria-label="play video">
                 <span class="material-symbols-rounded" aria-hidden="true">
                   play_arrow</span
                 >
@@ -832,12 +894,12 @@
         - #STORY
         -->
 
-        <section class="section story">
+        <section class="section story" aria-labelledby="story-label">
           <div class="container">
             <div class="title-wrapper">
               <div>
                 <p class="section-subtitle title-medium">Our Customers</p>
-                <h2 class="section-title headline-medium">
+                <h2 class="section-title headline-medium" id="story-label">
                   We Help 1000+ Family Find Their True Home
                 </h2>
                 <ul class="avatar-list">
@@ -1145,7 +1207,7 @@
               congue pharetra pulvinar leo. Sed ut amet ipsum.
             </p>
           </div>
-          <nav class="footer-nav" aria-labelledby="nav-label-2">
+          <nav class="footer-nav" aria-labelledby="nav-label-1">
             <p class="title-small footer-list-title" id="nav-label-1">
               Quick link
             </p>
@@ -1205,17 +1267,17 @@
                 <ul class="social-list">
                   <li>
                     <a href="#" class="social-link">
-                      <img src="./assets/images/facebook.svg" alt="facebook" />
+<img src="./assets/images/facebook.svg" alt="facebook" loading="lazy" decoding="async" />
                     </a>
                   </li>
                   <li>
                     <a href="#" class="social-link">
-                      <img src="./assets/images/twitter.svg" alt="twitter" />
+<img src="./assets/images/twitter.svg" alt="twitter" loading="lazy" decoding="async" />
                     </a>
                   </li>
                   <li>
                     <a href="#" class="social-link">
-                      <img src="./assets/images/insta.svg" alt="instagram" />
+<img src="./assets/images/insta.svg" alt="instagram" loading="lazy" decoding="async" />
                     </a>
                   </li>
                 </ul>
