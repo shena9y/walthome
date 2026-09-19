@@ -1,34 +1,53 @@
 "use strict";
 
 /**
- *Navbar Toggle In Mobile
+ * Navbar toggle in mobile
+ * (same `.active` class hook as before, now kept in sync with aria-expanded)
  */
 
-const /** {NodeElement} */ $navbar = document.querySelector("[data-navbar]");
-const /**{NodeElement} */ $navToggler =
-    document.querySelector("[data-nav-toggler]");
+const $navbar = document.querySelector("[data-navbar]");
+const $navToggler = document.querySelector("[data-nav-toggler]");
 
-$navToggler.addEventListener("click", () => $navbar.classList.toggle("active"));
+if ($navbar && $navToggler) {
+  const setNavbarExpanded = (isExpanded) => {
+    $navToggler.setAttribute("aria-expanded", `${isExpanded}`);
+  };
+
+  setNavbarExpanded($navbar.classList.contains("active"));
+
+  $navToggler.addEventListener("click", () => {
+    setNavbarExpanded($navbar.classList.toggle("active"));
+  });
+}
 
 /**
- * Headder scroll state
+ * Header scroll state
  */
 
-const /**{NodeElement}*/ $header = document.querySelector("[data-header]");
+const $header = document.querySelector("[data-header]");
 
-window.addEventListener("scroll", (e) => {
-  $header.classList[window.scrollY > 50 ? "add" : "remove"]("active");
-});
+if ($header) {
+  const SCROLL_THRESHOLD = 50;
+
+  const updateHeaderState = () => {
+    $header.classList.toggle("active", window.scrollY > SCROLL_THRESHOLD);
+  };
+
+  window.addEventListener("scroll", updateHeaderState, { passive: true });
+
+  // keep the header correct when the page is restored mid-scroll
+  updateHeaderState();
+}
 
 /**
  * Add to favorite button toggle
  */
 
-const /**{NodeList} */ $toggleBtns =
-    document.querySelectorAll("[data-toggle-btn]");
+const $toggleBtns = document.querySelectorAll("[data-toggle-btn]");
 
 $toggleBtns.forEach(($toggleBtn) => {
   $toggleBtn.addEventListener("click", () => {
-    $toggleBtn.classList.toggle("active");
+    const isActive = $toggleBtn.classList.toggle("active");
+    $toggleBtn.setAttribute("aria-pressed", `${isActive}`);
   });
 });
