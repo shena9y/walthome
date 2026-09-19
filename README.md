@@ -7,6 +7,8 @@ WaltHome is a fully responsive real-estate landing website for renting, buying a
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-brightgreen?style=flat)
 
+🔗 **Live Demo:** [https://shena9y.github.io/walthome/](https://shena9y.github.io/walthome/)
+
 ## ✨ Features
 
 - 🔍 **Search bar** with Buy / Sell / Rent mode selector in the hero section
@@ -39,6 +41,8 @@ walthome/
 ```
 
 ## 🚀 Getting Started
+
+**Try it live:** [https://shena9y.github.io/walthome/](https://shena9y.github.io/walthome/) — no installation needed!
 
 No build step required — it's a static site:
 
