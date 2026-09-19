@@ -98,6 +98,29 @@
   --transition-easing-quick: cubic-bezier(0, 0.7, 0.3, 1);
   --transition-duration-quick: 200ms;
   --transition-duration-smooth: 500ms;
+  /* shorthand of the repeated transition values above */
+  --transition-quick: var(--transition-duration-quick) var(--transition-easing-quick);
+  --transition-smooth: var(--transition-duration-smooth) var(--transition-easing-quick);
+  /* smooth 300ms transition for interactive components */
+  --transition: 0.3s ease;
+  /*
+  - extra radius
+  */
+  --radius-tiny: 4px;
+  /*
+  - overlay colors reused instead of hardcoded hex values
+  */
+  --overlay-dark-30: #0000004d;
+  --overlay-dark-75: #000000bf;
+  --overlay-dark-80: #000000cc;
+  --overlay-dark-0: #00000000;
+  --overlay-light-50: #ffffff80;
+  --overlay-light-0: #ffffff00;
+  /*
+  - interactive elevation
+  */
+  --shadow-lift: 0px 4px 12px 0px #00000014;
+  --shadow-lift-strong: 0px 18px 36px 0px #0000002e;
 }
 /*-----------------------------------*\
   #RESET
@@ -160,17 +183,17 @@ body {
   color: var(--neutral-5);
   font-size: var(--fs-body-medium);
   line-height: var(--lh-body-medium);
-  height: 500vh;
+  min-height: 100vh;
 }
 ::-webkit-scrollbar {
   width: 12px;
 }
-::-webkit-scrollbar-rack {
+::-webkit-scrollbar-track {
   background-color: var(--neutral-90);
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--neutral-60);
-  border-radius: 4px;
+  border-radius: var(--radius-tiny);
 }
 /*--------------
 ---------------------*\
@@ -275,7 +298,7 @@ body {
   padding-inline: 24px;
   border-radius: var(--radius-full);
   max-width: max-content;
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  transition: var(--transition-quick);
 }
 .btn-fill {
   background-color: var(--primary-100);
@@ -315,7 +338,7 @@ body {
   color: var(--neutral-10);
   border-radius: var(--radius-small);
   box-shadow: var(--shadow-3);
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  transition: var(--transition-quick);
 }
 .icon-btn:where(:hover, :focus-visible) {
   background-color: var(--neutral-90);
@@ -344,18 +367,21 @@ body {
   border-radius: var(--radius-large);
   overflow: hidden;
   box-shadow: var(--shadow-2);
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .card:where(:hover, :focus-within) {
-  box-shadow: var(--shadow-4);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lift-strong);
 }
 
 .card-banner {
   position: relative;
 }
 .card-banner .img-cover {
-  transition: var(--transition-duration-smooth) var(--transition-easing-quick);
+  transition: var(--transition-smooth);
 }
 .card:where(:hover, :focus-within) .img-cover {
   scale: 1.05;
@@ -376,7 +402,7 @@ body {
   opacity: 0;
   visibility: hidden;
   scale: 0.8;
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  transition: var(--transition-quick);
 }
 .fav-btn {
   color: var(--error-100);
@@ -401,7 +427,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  transition: var(--transition-quick);
 }
 
 .card-title:where(:hover, :focus-visible) {
@@ -481,7 +507,7 @@ body {
   visibility: hidden;
   opacity: 0;
   scale: 0.4;
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  transition: var(--transition-quick);
   box-shadow: var(--shadow-1);
   transform-origin: top right;
   z-index: 4;
@@ -506,7 +532,7 @@ body {
 .btn-link {
   color: var(--neutral-30);
   padding: 6px 12px;
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  transition: var(--transition-quick);
 }
 .btn-link {
   border-block-start: 1px solid var(--neutral-90);
@@ -545,7 +571,7 @@ body {
   display: grid;
   padding: 8px;
   gap: 8px;
-  border-radius: 16px;
+  border-radius: var(--radius-large);
   box-shadow: var(--shadow-4);
 }
 .search-item {
@@ -556,7 +582,7 @@ body {
   height: 50px;
   padding: 5px 16px 12px;
   border-radius: var(--radius-medium);
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  transition: var(--transition-quick);
   cursor: pointer;
 }
 .search-item .search-item-field:where(:hover, :focus) {
@@ -589,8 +615,8 @@ body {
   height: 64px;
   padding-inline: 24px;
   gap: 12px;
-  border-radius: 12px;
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  border-radius: var(--radius-medium);
+  transition: var(--transition-quick);
 }
 
 .search-btn:where(:hover, :focus) {
@@ -663,9 +689,9 @@ body {
 
 .video-card {
   height: 260px;
-  border-radius: 32px;
+  border-radius: var(--radius-extra-large);
   background:
-    linear-gradient(0deg, #0000004d, #0000004d), url("../images/video-card.jpg");
+    linear-gradient(0deg, var(--overlay-dark-30), var(--overlay-dark-30)), url("../images/video-card.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -685,16 +711,16 @@ body {
 
 @keyframes pluse {
   0% {
-    box-shadow: 0 0 0 0 #ffffff80;
+    box-shadow: 0 0 0 0 var(--overlay-light-50);
   }
   100% {
-    box-shadow: 0 0 0 20px #ffffff00;
+    box-shadow: 0 0 0 20px var(--overlay-light-0);
   }
 }
 .play-btn .material-symbols-rounded {
   font-size: 4rem;
   font-variation-settings: "FILL" 0;
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  transition: var(--transition-quick);
 }
 .play-btn:where(:hover, :focus-visible) .material-symbols-rounded {
   font-variation-settings: "FILL" 1;
@@ -727,7 +753,7 @@ body {
   inset: 0;
   display: grid;
   place-items: center;
-  background-color: #000000bf;
+  background-color: var(--overlay-dark-75);
   color: var(--neutral-100);
 }
 
@@ -748,7 +774,7 @@ body {
   background-position: center;
   border-radius: var(--radius-large);
   overflow: hidden;
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  transition: var(--transition-quick);
 }
 
 .story-card:where(:hover, :focus-visible) {
@@ -757,7 +783,7 @@ body {
 .story-card .overlay-content {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #00000000 33.33%, #000000cc 100%);
+  background: linear-gradient(180deg, var(--overlay-dark-0) 33.33%, var(--overlay-dark-80) 100%);
   color: var(--white);
   display: flex;
   align-items: flex-end;
@@ -814,7 +840,7 @@ body {
   gap: 16px;
 }
 .footer-link {
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+  transition: var(--transition-quick);
 }
 .footer-link:where(:hover, :focus-visible) {
   color: var(--primary-100);
@@ -1238,5 +1264,204 @@ body {
   }
   .footer-top .container {
     grid-template-columns: 580px repeat(3, 1fr);
+  }
+}
+
+/*-----------------------------------*\
+  #INTERACTION POLISH
+  (smooth 0.3s transitions, hover / focus-visible states)
+\*-----------------------------------*/
+
+/*
+- keyboard focus visibility
+*/
+:where(a, button, input, select, [tabindex]):focus-visible {
+  outline: 3px solid var(--primary-100);
+  outline-offset: 3px;
+}
+.footer :where(a, button):focus-visible {
+  outline-color: var(--secondary-100);
+}
+@media (min-width: 992px) {
+  .header :where(a, button):focus-visible {
+    outline-color: var(--secondary-100);
+  }
+}
+
+/*
+- smooth transitions on interactive components
+*/
+.btn,
+.search-btn,
+.icon-btn,
+.play-btn,
+.nav-toggle-btn,
+.navbar-link,
+.btn-link,
+.card-title,
+.footer-link,
+.social-link {
+  transition:
+    transform var(--transition),
+    background-color var(--transition),
+    color var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition),
+    opacity var(--transition);
+}
+
+/*
+- hover / active states
+*/
+.btn:is(:hover, :focus-visible),
+.search-btn:is(:hover, :focus-visible),
+.icon-btn:is(:hover, :focus-visible),
+.play-btn:is(:hover, :focus-visible) {
+  transform: translateY(-2px);
+}
+.search-btn:is(:hover, :focus-visible) {
+  box-shadow: var(--shadow-lift);
+}
+.btn:active,
+.search-btn:active,
+.icon-btn:active,
+.play-btn:active,
+.nav-toggle-btn:active {
+  transform: translateY(-1px) scale(0.97);
+}
+
+/*
+- navbar links
+*/
+.navbar-link:is(:hover, :focus-visible) {
+  background-color: var(--neutral-95);
+  border-radius: var(--radius-small);
+}
+@media (min-width: 992px) {
+  .navbar-link {
+    position: relative;
+  }
+  .navbar-link:is(:hover, :focus-visible) {
+    background-color: transparent;
+  }
+  .navbar-link::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    translate: -50% 0;
+    width: 4px;
+    height: 4px;
+    border-radius: var(--radius-circle);
+    background-color: currentColor;
+    opacity: 0;
+    scale: 0.4;
+    transition:
+      opacity var(--transition),
+      scale var(--transition);
+  }
+  .navbar-link:is(:hover, :focus-visible)::before,
+  .navbar-link.active::before {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/*
+- social links
+*/
+.social-link:is(:hover, :focus-visible) {
+  transform: translateY(-3px);
+  opacity: 0.85;
+}
+
+/*-----------------------------------*\
+  #ENTRANCE ANIMATION
+\*-----------------------------------*/
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title,
+.hero-text,
+.hero .search-bar,
+.hero-banner,
+.hero .bg-pattern,
+.section .container,
+.footer-top .container {
+  animation: fadeUp 0.8s var(--transition-easing-quick) both;
+}
+
+/* staggered delays */
+.hero-title {
+  animation-delay: 0.05s;
+}
+.hero-banner {
+  animation-delay: 0.1s;
+}
+.hero-text {
+  animation-delay: 0.15s;
+}
+.hero .search-bar {
+  animation-delay: 0.25s;
+}
+.hero .bg-pattern {
+  animation-delay: 0.35s;
+}
+.property .container {
+  animation-delay: 0.05s;
+}
+.feature .container {
+  animation-delay: 0.1s;
+}
+.feature-2 .container {
+  animation-delay: 0.15s;
+}
+.video .container {
+  animation-delay: 0.2s;
+}
+.story .container {
+  animation-delay: 0.25s;
+}
+.footer-top .container {
+  animation-delay: 0.3s;
+}
+
+/*
+- progressive enhancement: reveal sections while scrolling
+  (browsers without scroll driven animations keep the entrance animation above)
+*/
+@supports (animation-timeline: view()) {
+  .section .container,
+  .footer-top .container {
+    animation: fadeUp linear both;
+    animation-duration: auto;
+    animation-delay: 0s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+  }
+}
+
+/*-----------------------------------*\
+  #REDUCED MOTION
+\*-----------------------------------*/
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  html {
+    scroll-behavior: auto !important;
   }
 }
