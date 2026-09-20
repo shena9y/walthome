@@ -558,9 +558,14 @@ body.nav-open {
 
 .hero-stats {
   display: flex;
-  gap: 48px;
+  flex-wrap: wrap;
+  gap: 28px 48px;
   border-block-start: 1px solid var(--line);
   padding-block-start: 32px;
+}
+
+.about-content .hero-stats {
+  margin-block-start: 8px;
 }
 
 .stat-value {
@@ -1609,8 +1614,10 @@ a.footer-link:hover {
 
 /*-----------------------------------*\
   #REVEAL ANIMATIONS
+  (gated behind `.js` on <html> so content
+  is never hidden if JavaScript is unavailable)
 \*-----------------------------------*/
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(32px);
   transition:
@@ -1619,7 +1626,7 @@ a.footer-link:hover {
   transition-delay: var(--reveal-delay, 0ms);
 }
 
-.reveal.revealed {
+.js .reveal.revealed {
   opacity: 1;
   transform: translateY(0);
 }
