@@ -110,6 +110,15 @@ button {
   cursor: pointer;
 }
 
+/* keep form controls shrinkable inside grids (prevents phone-width overflow) */
+input,
+select,
+textarea {
+  min-width: 0;
+  max-width: 100%;
+  font-family: inherit;
+}
+
 em {
   font-style: italic;
 }
@@ -121,6 +130,10 @@ html {
   font-size: var(--fs-base);
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
+  /* `clip` (not `hidden`) blocks sideways scrolling without creating
+     a scroll container — that keeps position: sticky working */
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -131,10 +144,30 @@ body {
   font-weight: var(--weight-regular);
   line-height: var(--lh-body);
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body.nav-open {
   overflow: hidden;
+}
+
+/* dimmed backdrop behind the mobile navigation panel */
+body.nav-open::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 44;
+  background: #05050ac2;
+  animation: nav-fade 250ms var(--ease-out);
+}
+
+@keyframes nav-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 ::selection {
@@ -179,7 +212,11 @@ body.nav-open {
 }
 
 .material-symbols-rounded {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
   font-size: 2rem;
 }
 
@@ -320,9 +357,9 @@ body.nav-open {
 
 .header.active {
   height: 68px;
-  background: #0a0a0fd9;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  /* NOTE: no backdrop-filter here — it would turn the header into a
+     containing block for the fixed mobile nav panel and break it. */
+  background: #0a0a0ff2;
   border-block-end: 1px solid var(--line);
 }
 
@@ -534,8 +571,13 @@ body.nav-open {
 }
 
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 0 #d4a85366; }
-  50% { box-shadow: 0 0 0 8px #d4a85300; }
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 #d4a85366;
+  }
+  50% {
+    box-shadow: 0 0 0 8px #d4a85300;
+  }
 }
 
 .hero .display {
@@ -575,6 +617,8 @@ body.nav-open {
   color: var(--accent);
   line-height: 1;
   margin-block-end: 6px;
+  display: flex;
+  gap: 3px;
 }
 
 .stat-label {
@@ -841,7 +885,11 @@ body.nav-open {
 }
 
 .fav-btn.active .material-symbols-rounded {
-  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
 }
 
 .stay-body {
@@ -850,9 +898,14 @@ body.nav-open {
 
 .stay-head {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 12px;
+  gap: 6px 12px;
   margin-block-end: 14px;
+}
+
+.stay-head > div {
+  min-width: 0;
 }
 
 .stay-type {
@@ -891,7 +944,11 @@ body.nav-open {
 .stay-rating .material-symbols-rounded {
   font-size: 1.6rem;
   color: var(--star);
-  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
 }
 
 .stay-reviews {
@@ -1176,7 +1233,9 @@ body.nav-open {
 .work-card {
   border-radius: var(--radius-medium);
   overflow: hidden;
-  transition: opacity var(--transition-smooth), transform var(--transition-smooth);
+  transition:
+    opacity var(--transition-smooth),
+    transform var(--transition-smooth);
 }
 
 .work-card.hidden {
@@ -1209,7 +1268,12 @@ body.nav-open {
   flex-direction: column;
   justify-content: space-between;
   padding: 24px;
-  background: linear-gradient(to top, var(--overlay-80), var(--overlay-60) 45%, transparent 75%);
+  background: linear-gradient(
+    to top,
+    var(--overlay-80),
+    var(--overlay-60) 45%,
+    transparent 75%
+  );
   opacity: 0;
   transition: opacity var(--transition-quick);
 }
@@ -1287,7 +1351,9 @@ body.nav-open {
 }
 
 @keyframes marquee {
-  to { transform: translateX(-50%); }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .about-grid {
@@ -1337,7 +1403,11 @@ body.nav-open {
 
 .about-highlight .material-symbols-rounded {
   color: var(--accent);
-  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
 }
 
 /*-----------------------------------*\
@@ -1379,7 +1449,11 @@ body.nav-open {
 .quote-stars .material-symbols-rounded {
   font-size: 1.6rem;
   color: var(--star);
-  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
 }
 
 .quote-text {
@@ -1674,18 +1748,29 @@ a.footer-link:hover {
     position: fixed;
     inset-block-start: 0;
     inset-inline-end: 0;
+    height: 100vh;
     height: 100dvh;
     width: min(360px, 85vw);
+    max-width: 100%;
     background: var(--bg-elevated);
     border-inline-start: 1px solid var(--line);
     padding: calc(var(--header-height) + 24px) 40px 40px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
     transform: translateX(100%);
-    transition: transform var(--transition-smooth);
+    visibility: hidden;
+    transition:
+      transform var(--transition-smooth),
+      visibility 0s linear var(--duration-smooth);
     z-index: 45;
   }
 
   .navbar.active {
     transform: translateX(0);
+    visibility: visible;
+    transition:
+      transform var(--transition-smooth),
+      visibility 0s;
   }
 
   .navbar-list {
@@ -1699,8 +1784,20 @@ a.footer-link:hover {
     padding-block: 12px;
   }
 
+  .header-actions {
+    gap: 10px;
+  }
+
   .header-actions .btn {
     display: none;
+  }
+
+  .nav-toggler {
+    background: #0a0a0fcc;
+  }
+
+  .section {
+    padding-block: 96px;
   }
 
   .about-grid {
@@ -1728,6 +1825,26 @@ a.footer-link:hover {
   .hero-stats {
     gap: 28px;
     flex-wrap: wrap;
+  }
+
+  /* 16px text stops iOS Safari from zooming when a field is focused */
+  .search-field input,
+  .search-field select,
+  .filter-field input,
+  .filter-field select,
+  .booking-field input,
+  .booking-field select,
+  .booking-field textarea,
+  .newsletter-form input {
+    font-size: 1.6rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form .btn {
+    width: 100%;
   }
 
   .service-list,
@@ -1762,6 +1879,77 @@ a.footer-link:hover {
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .back-top {
+    width: 46px;
+    height: 46px;
+    inset-block-end: 18px;
+    inset-inline-end: 18px;
+  }
+
+  .stat-value {
+    font-size: 3.2rem;
+  }
+}
+
+/*-----------------------------------*\
+  #SMALL PHONES (<= 420px)
+\*-----------------------------------*/
+@media (max-width: 420px) {
+  :root {
+    --gutter: 16px;
+  }
+
+  .logo img {
+    width: 124px;
+    height: 24px;
+  }
+
+  .icon-btn,
+  .nav-toggler {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar {
+    width: 100%;
+    padding-inline: 28px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  /* stack the booking search so date fields never get squeezed */
+  .search-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .stat-value {
+    font-size: 2.8rem;
+  }
+
+  .stay-grid,
+  .collection-list,
+  .why-list {
+    gap: 20px;
+  }
+
+  .service-card,
+  .collection-card,
+  .why-card,
+  .quote-card {
+    padding: 28px 22px 26px;
   }
 }
 

@@ -37,6 +37,22 @@ if ($navbar && $navToggler) {
     });
   });
 
+  // tap/click outside the panel (or on the backdrop) closes the menu
+  document.addEventListener("click", (event) => {
+    if (!$navbar.classList.contains("active")) return;
+    if ($navbar.contains(event.target) || $navToggler.contains(event.target)) return;
+    $navbar.classList.remove("active");
+    setNavbarExpanded(false);
+  });
+
+  // returning to desktop widths should never leave the panel open
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860 && $navbar.classList.contains("active")) {
+      $navbar.classList.remove("active");
+      setNavbarExpanded(false);
+    }
+  });
+
   window.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && $navbar.classList.contains("active")) {
       $navbar.classList.remove("active");

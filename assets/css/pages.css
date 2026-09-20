@@ -170,13 +170,16 @@
   position: absolute;
   inset-block-end: 18px;
   inset-inline-start: 20px;
+  max-width: calc(100% - 40px);
   padding: 8px 16px;
   background: #0a0a0fd9;
-  backdrop-filter: blur(8px);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-full);
   font-size: var(--fs-micro);
   color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*-----------------------------------*\
@@ -229,10 +232,16 @@
 
 .details-head {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
   margin-block-end: 18px;
+}
+
+.details-head > div {
+  min-width: 0;
+  flex: 1 1 60%;
 }
 
 .details-title {
@@ -564,6 +573,8 @@ a.contact-value:hover {
 
   .filter-bar {
     grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px;
   }
 
   .stay-grid,
@@ -577,6 +588,10 @@ a.contact-value:hover {
     align-items: flex-start;
   }
 
+  .section-head-row .btn {
+    width: 100%;
+  }
+
   .booking-dates,
   .form-row,
   .amenities-grid {
@@ -587,7 +602,46 @@ a.contact-value:hover {
     gap: 32px;
   }
 
+  .details-section {
+    padding-block-start: calc(var(--header-height) + 28px);
+  }
+
+  .page-hero {
+    padding-block: calc(var(--header-height) + 40px) 48px;
+  }
+
+  .booking-widget {
+    padding: 22px;
+  }
+
+  .contact-item {
+    padding: 20px;
+  }
+
+  .contact-form {
+    padding: 22px;
+  }
+
+  .empty-state {
+    padding: 56px 20px;
+  }
+
   .host-card {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 420px) {
+  .amenities-grid,
+  .stay-specs-lg {
+    gap: 10px;
+  }
+
+  .details-media {
+    aspect-ratio: 4 / 3;
+  }
+
+  .booking-price {
+    font-size: 2.4rem;
   }
 }
