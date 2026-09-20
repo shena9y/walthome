@@ -8,6 +8,7 @@ A high-end booking website for exceptional homes - villas, penthouses, cabins, l
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-brightgreen?style=flat)
 
 ## Pages
+ 🔗 Live Demo: [https://shena9y.github.io/DreamPlace/](https://shena9y.github.io/DreamPlace/)
 
 - **index.html** - hero with a full booking search bar (destination / dates / guests), collections, featured stays, trust section, experience film, guest stories, newsletter
 - **stays.html** - complete catalogue with live filtering (destination, type, price, guests) + sorting, pre-filled from URL params
