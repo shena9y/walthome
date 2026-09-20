@@ -92,36 +92,8 @@
 }
 
 /*-----------------------------------*\
-  #WHY LIST + EXPERIENCE
+  #EXPERIENCE (base grid lives in style.css)
 \*-----------------------------------*/
-.why-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.why-card {
-  position: relative;
-  padding: 36px 28px 32px;
-  background: var(--bg-surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-medium);
-  transition: var(--transition-quick);
-}
-
-.why-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--line-strong);
-  box-shadow: var(--shadow-soft);
-}
-
-.experience-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  gap: 64px;
-}
-
 .video-card {
   position: relative;
   display: block;
@@ -523,15 +495,6 @@ a.contact-value:hover {
   #RESPONSIVE
 \*-----------------------------------*/
 @media (max-width: 1080px) {
-  .collection-list,
-  .why-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .stay-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .details-grid {
     grid-template-columns: 1fr;
   }
@@ -547,49 +510,13 @@ a.contact-value:hover {
   .contact-grid {
     grid-template-columns: 1fr;
   }
-
-  .experience-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
 }
 
 @media (max-width: 600px) {
-  .search-bar {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .search-field {
-    border-inline-end: none;
-    border-block-end: 1px solid var(--line);
-    padding: 10px 12px;
-  }
-
-  .search-bar .search-submit {
-    grid-column: 1 / -1;
-    width: 100%;
-    border-radius: var(--radius-small);
-  }
-
   .filter-bar {
     grid-template-columns: 1fr;
     gap: 14px;
     padding: 18px;
-  }
-
-  .stay-grid,
-  .collection-list,
-  .why-list {
-    grid-template-columns: 1fr;
-  }
-
-  .section-head-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .section-head-row .btn {
-    width: 100%;
   }
 
   .booking-dates,
@@ -631,7 +558,7 @@ a.contact-value:hover {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .amenities-grid,
   .stay-specs-lg {
     gap: 10px;
