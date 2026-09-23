@@ -1,4 +1,4 @@
-﻿# Dream Place - Luxury Stay Booking Platform
+# Dream Place - Luxury Stay Booking Platform
 
 A high-end booking website for exceptional homes - villas, penthouses, cabins, lake houses and retreats. Dark, editorial design (noir + gold) built with pure HTML, CSS and vanilla JavaScript across 6 connected pages, with a front-end data layer powering real booking flows.
 
@@ -8,7 +8,8 @@ A high-end booking website for exceptional homes - villas, penthouses, cabins, l
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-brightgreen?style=flat)
 
 ## Pages
- 🔗 Live Demo: [https://shena9y.github.io/DreamPlace/](https://shena9y.github.io/DreamPlace/)
+
+🔗 Live Demo: [https://shena9y.github.io/DreamPlace/](https://shena9y.github.io/DreamPlace/)
 
 - **index.html** - hero with a full booking search bar (destination / dates / guests), collections, featured stays, trust section, experience film, guest stories, newsletter
 - **stays.html** - complete catalogue with live filtering (destination, type, price, guests) + sorting, pre-filled from URL params
@@ -36,6 +37,10 @@ git clone https://github.com/shena9y/walthome.git
 cd walthome
 npx serve .
 ```
+
+### Follow this link to the live demo 👇
+
+🔗 Live Demo: [https://shena9y.github.io/DreamPlace/](https://shena9y.github.io/DreamPlace/)
 
 ## License
 
